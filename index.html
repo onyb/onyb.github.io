@@ -1,84 +1,105 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Anirudha Bose</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/application.css">
-    <link rel="shortcut icon" href="img/favicon.png">
-  </head>
-  <body>
-    <div class="grid">
-      <header class="grid__col--12 panel--padded--centered" role="banner"> 
-	  	<a class="site-logo"></a>
-        <nav class="navbar" role="navigation">
-          <span id="toggle" class="icn--nav-toggle is-displayed-mobile">
-            <b class="srt">Toggle</b>
-          </span>
-          <ul class="nav is-collapsed-mobile">
-		  <hr style="width: 60%">
-            <li class="nav__item"><a href="#">Home</a></li>
-            <li class="nav__item"><a href="http://onyb.blogspot.in/" target="_blank">Blog</a></li>
-            <li class="nav__item"><a href="http://onyb.github.io/Anirudha_Bose_CV.pdf" target="_blank">Curriculum Vitae</a></li>
-			<li class="nav__item"><a href="#about">About Me</a></li>
-          <hr style="width: 60%">
-        </nav>
-      </header>
-    </div>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <link href="./src/base.css" rel="stylesheet" type="text/css">
 
-    <h4 id="about" class="grid">About Me</h4>
+  <title>Anirudha Bose | Home</title>
 
-    <div class="grid">
-      <div class="centered grid__col--8">
-        I'm a third year CS undergrad at <a href="http://www.iiit-bh.ac.in/" target="_blank">IIIT Bhubaneswar</a>. I love
-        programming at a fundamental level. My interests include Scientific Computing, Operating Systems, and Quantum Algorithms.<br><br>
+  <script type="text/javascript" src="./src/grid.js"></script>
 
-        I happen to have a sporadically updated <a href="http://onyb.blogspot.in/" target="_blank">blog</a>
-        which allows me to scribble relatively mindless things. It is actually a recycled version of my original blog where I
-        used to document updates of my GSoC project with CERN.<br><br>
-		
-		<b>Update: </b> CERN Openlab updates as well as old posts related to my GSoC 2014 project with CERN SFT can be found under <a href="http://onyb.blogspot.in/search/label/cern" target="_blank">this</a> label. <br><br>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
 
-      Find me on <a href="http://in.linkedin.com/in/anibose" target="_blank">LinkedIn</a>, 
-	  <a href="https://www.facebook.com/ani.bose" target="_blank">Facebook</a>, 
-	  <a href="https://github.com/onyb" target="_blank">Github</a>, and 
-      <a href="http://www.quora.com/Anirudha-Bose-1" target="_blank">Quora</a>.
-	  If you would like to get in touch, you can drop me an email at <code>gmail:ani07nov</code>
-      (obfuscated as host:username).<br><br><br>
-      </div>
-    </div>
- 
- <!--
-     <div class="grid is-hidden-mobile">
-      <div class="grid__col--12">
-        <img class="img--hero" src="img/hero.jpg" alt="Poly">
-      </div>
-    </div>
- 
-    <h4 id="images" class="grid">Images</h4>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+</head>
 
-    <div class="grid">
-      <div class="grid__col--5">
-        <img src="img/sample.jpg" alt="sample image">
+<body>
+  <br></br>
+
+  <header>
+    <span><a href="http://onyb.github.io">Anirudha Bose</a></span>
+    <span>Just another CS undergraduate</span>
+  </header>
+
+  <br></br>
+
+  <section>
+    <nav>
+      <h3>Contents</h3>
+
+      <ul>
+        <li>
+          <a href="./about.html">About</a> a small blurb about myself
+        </li>
+
+        <li>
+          <a href="http://onyb.blogspot.in">Blog</a> sporadically updated with relatively mindless things
+        </li>
+
+        <li>
+          <a href="./Anirudha_Bose_CV.pdf">Curriculum Vitae</a> my highly available CV written in $\LaTeX$
+        </li>
+
+        <li>
+          <a href="mailto:ani07nov@gmail.com">Electronic mail</a> by and large the quickest approach to contact me
+        </li>
+
+    </nav>
+  </section>
+
+  <section>
+    <nav>
+      <h3>Social profiles</h3>
+
+      <ul>
+        <li>
+          <a href="http://in.linkedin.com/in/anibose" target="_blank">LinkedIn</a>
+        </li>
+
+        <li>
+    	  <a href="https://www.facebook.com/ani.bose" target="_blank">Facebook</a>
+        </li>
+
+        <li>
+    	  <a href="https://github.com/onyb" target="_blank">GitHub</a>, <a href="http://stockroom.io/onyb" target="_blank">Stockroom</a>
+        </li>
+
+        <li>
+          <a href="http://www.quora.com/Anirudha-Bose-1" target="_blank">Quora</a>
+        </li>
+      </ul>
+
+    </nav>
+  </section>
+
+  <section>
+    <nav>
+      <h3>Recent Blog Posts</h3>
+
+      <div id="recent-posts">
+        Parsing JSON data...
       </div>
-      <div class="grid__col--5">
-        <img class="img--wrap" src="img/sample.jpg" alt="sample image">
-      </div>
-      <div class="grid__col--2">
-        <img class="img--avatar" src="img/avatar.png" alt="Avatar">
-      </div>
-    </div>
- -->
- 
-    <div class="grid">
-      <footer class="grid__col--12 panel--padded--centered" role="contentinfo">
-        <p>&copy; Anirudha Bose, 2015. Built using <a href="https://github.com/Guilh/Poly" target="_blank">Poly</a>.</p>
-      </footer>
-    </div>
-    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script>
-      $('#toggle').click(function() {
-        $(this).next('.nav').toggleClass("is-collapsed-mobile");
-      });
-    </script>
-  </body>
+      <script async="true"
+              src="http://onyb.blogspot.in/feeds/posts/default?alt=json-in-script&max-results=7&callback=JSON_parser"
+              type="text/javascript">
+      </script>
+      <script>
+        function JSON_parser(data) {
+          var entry = data.feed.entry;
+          var str = "<ul>"
+          for (i = 0; i < 7; i++) {
+            str += '<li><a href="' + entry[i].link[4].href +
+                   '" target="_blank">' + entry[i].title.$t + '<\/a><\/li>';
+          }
+          str += '<\/ul>'
+          document.getElementById('recent-posts').innerHTML = str;
+        }
+      </script>
+    </nav>
+  </section>
+</body>
 </html>

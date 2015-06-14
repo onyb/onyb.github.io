@@ -1,0 +1,117 @@
+@import url('http://fonts.googleapis.com/css?family=Pacifico');
+
+body {
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 21px;
+    margin: 0 auto;
+    padding: 0;
+    width: 700px
+}
+sup {
+    vertical-align: baseline;
+    bottom: 5px;
+    position: relative
+}
+
+header span a:link,
+header span a:visited {
+    color: #333;
+    display: inline-block;
+    font-family: Pacifico;
+    font-size: 28px;
+    font-weight: normal;
+    text-decoration: none
+}
+header span {
+    margin-left: 14px
+}
+body > article {
+    margin-top: 21px
+}
+article h1 {
+    color: #333;
+    font-size: 35px;
+    line-height: 42px;
+    margin: 0 42px;
+    text-transform: uppercase
+}
+article h2 {
+    color: #777;
+    font-size: 20px;
+    line-height: 21px;
+    margin: 0 42px 0 42px;
+    text-transform: uppercase
+}
+article h3 {
+    color: #777;
+    margin: 0 42px 0 42px
+}
+article p,
+article ul {
+    margin: 21px 42px;
+    width: 483px
+}
+article pre {
+    background-color: #efeffa;
+    color: #334;
+    font-size: 12px;
+    line-height: 21px;
+    margin: 21px 42px;
+    padding: 21px;
+    width: 546px
+}
+article blockquote {
+    border-left: solid #ddd 7px;
+    padding-left: 14px;
+    width: 399px;
+    margin: 0px 42px
+}
+article a:link,
+article a:visited {
+    border-bottom: solid 1px #ddd;
+    color: #333;
+    text-decoration: none
+}
+article a:hover,
+article a:active {
+    color: #333;
+    border-bottom-color: #333
+}
+article img {
+    margin-left: 42px
+}
+nav {
+    margin-top: 21px
+}
+nav ul {
+    list-style: none;
+    padding: 0 42px;
+    margin: 0
+}
+nav ul li {
+    color: #777
+}
+nav ul li a:link,
+nav ul li a:visited {
+    border-bottom: solid 1px #ddd;
+    color: #333;
+    text-decoration: none
+}
+nav ul li a:active,
+nav ul li a:hover {
+    border-bottom-color: #333
+}
+section {}nav h3,
+section h3 {
+    color: #777;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 21px;
+    margin-left: 21px;
+    margin-bottom: 0;
+    margin: 0 0 0 21px;
+    text-transform: uppercase
+}
