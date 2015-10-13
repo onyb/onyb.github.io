@@ -1,103 +1,168 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <meta name="description"
-    content="Welcome to my personal website of Anirudha Bose.">
-  <meta name="keywords" content="Anirudha Bose, CERN, GSoC, IIIT Bhubaneswar, Openlab, Computer Science">
-  <meta name="author" content="Anirudha Bose">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="Welcome to my personal website of Anirudha Bose.">
+    <meta name="keywords" content="Anirudha Bose, CERN, GSoC, IIIT Bhubaneswar, Openlab, Computer Science">
+    <meta name="author" content="Anirudha Bose">
 
-  <link href="./src/base.css" rel="stylesheet" type="text/css">
+    <link href="./src/base.css" rel="stylesheet" type="text/css">
 
-  <title>Anirudha Bose | Home</title>
+    <title>Anirudha Bose | Home</title>
 
-  <script type="text/javascript" src="./src/grid.js"></script>
+    <script type="text/javascript" src="./src/grid.js"></script>
 </head>
 
 <body>
-  <br>
+    <br>
 
-  <header>
-    <h1><a href="http://onyb.github.io">Anirudha Bose</a></h1>
-    <h1>Just another CS undergraduate</h1>
-  </header>
+    <header>
+        <h1><a href="http://onyb.github.io">Anirudha Bose</a></h1>
+        <h1>Just another CS undergraduate</h1>
+    </header>
 
-  <br>
+    <br>
 
-  <section>
-    <nav>
-      <h3>Contents</h3>
+    <section>
+        <nav>
+            <h3>Contents</h3>
 
-      <ul>
-        <li>
-          <a href="./about.html">About</a> a small blurb about myself
-        </li>
+            <ul>
+                <li>
+                    <a href="./about.html">About</a> a small blurb about myself
+                </li>
 
-        <li>
-          <a href="http://onyb.blogspot.in" target="_blank">Blog</a> sporadically updated with relatively mindless things
-        </li>
+                <li>
+                    <a href="http://onyb.blogspot.in" target="_blank">Blog</a> sporadically updated with relatively mindless things
+                </li>
 
-        <li>
-          <a href="./public/Anirudha_Bose_CV.pdf" target="_blank">Curriculum Vitae</a>
-        </li>
+                <li>
+                    <a href="./public/Anirudha_Bose_CV.pdf" target="_blank">Curriculum Vitae</a>
+                </li>
 
-        <li>
-          <a href="mailto:ani07nov@gmail.com">Electronic mail</a>
-        </li>
-      </ul>
+                <li>
+                    <a href="mailto:ani07nov@gmail.com">Electronic mail</a>
+                </li>
+            </ul>
 
-    </nav>
-  </section>
+        </nav>
+    </section>
 
-  <section>
-    <nav>
-      <h3>Social profiles</h3>
+    <section>
+        <nav>
+            <h3>Social profiles</h3>
 
-      <ul>
-        <li>
-          <a href="http://in.linkedin.com/in/anibose" target="_blank">LinkedIn</a>
-        </li>
+            <ul>
+                <li>
+                    <a href="http://in.linkedin.com/in/anibose" target="_blank">LinkedIn</a>
+                </li>
 
-        <li>
-          <a href="https://www.facebook.com/ani.bose" target="_blank">Facebook</a>
-        </li>
+                <li>
+                    <a href="https://www.facebook.com/ani.bose" target="_blank">Facebook</a>
+                </li>
 
-        <li>
-          <a href="https://github.com/onyb" target="_blank">GitHub</a>
-        </li>
+                <li>
+                    <a href="https://github.com/onyb" target="_blank">GitHub</a>
+                </li>
 
-        <li>
-          <a href="http://www.quora.com/Anirudha-Bose-1" target="_blank">Quora</a>
-        </li>
-      </ul>
+                <li>
+                    <a href="http://www.quora.com/Anirudha-Bose-1" target="_blank">Quora</a>
+                </li>
+            </ul>
 
-    </nav>
-  </section>
+        </nav>
+    </section>
 
-  <section>
-    <nav>
-      <h3>Recent Blog Posts</h3>
+    <section>
+        <nav>
+            <h3>Recent Blog Posts</h3>
 
-      <div id="recent-posts">
-        Parsing JSON data...
-      </div>
-      <script type="text/javascript"
-              src="http://onyb.blogspot.in/feeds/posts/default?alt=json-in-script&max-results=7&callback=JSON_parser"
-              async>
-      </script>
-      <script>
-        function JSON_parser(data) {
-          var entry = data.feed.entry;
-          var str = "<ul>"
-          for (i = 0; i < 7; i++) {
-            str += '<li><a href="' + entry[i].link[4].href +
-                   '" target="_blank">' + entry[i].title.$t + '<\/a><\/li>';
-          }
-          str += '<\/ul>';
-          document.getElementById('recent-posts').innerHTML = str;
-        }
-      </script>
-    </nav>
-  </section>
+            <div id="recent-posts">
+                Parsing JSON data...
+            </div>
+            <script type="text/javascript" src="http://onyb.blogspot.in/feeds/posts/default?alt=json-in-script&max-results=7&callback=JSON_parser" async>
+            </script>
+            <script>
+                function JSON_parser(data) {
+                    var entry = data.feed.entry;
+                    var str = "<ul>"
+                    for (i = 0; i < 5; i++) {
+                        str += '<li><a href="' + entry[i].link[4].href +
+                            '" target="_blank">' + entry[i].title.$t + '<\/a><\/li>';
+                    }
+                    str += '<\/ul>';
+                    document.getElementById('recent-posts').innerHTML = str;
+                }
+            </script>
+        </nav>
+    </section>
+
+    <section>
+        <nav>
+            <h3>Recent GitHub Activity</h3>
+            <div id="github" style="padding-left: 1cm">
+                <script type="text/javascript">
+                    document.write('\x3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js">\x3C/script>');
+                </script>
+                <script type="text/javascript">
+                    (function() {
+                        var params = {
+                            rssmikle_url: "https://github.com/onyb.atom",
+                            rssmikle_frame_width: "400",
+                            rssmikle_frame_height: "150",
+                            frame_height_by_article: "0",
+                            rssmikle_target: "_blank",
+                            rssmikle_font: "Arial, Helvetica, sans-serif",
+                            rssmikle_font_size: "12",
+                            rssmikle_border: "off",
+                            responsive: "off",
+                            rssmikle_css_url: "",
+                            text_align: "left",
+                            text_align2: "left",
+                            corner: "off",
+                            scrollbar: "on",
+                            autoscroll: "on",
+                            scrolldirection: "up",
+                            scrollstep: "3",
+                            mcspeed: "20",
+                            sort: "Off",
+                            rssmikle_title: "on",
+                            rssmikle_title_sentence: "@onyb",
+                            rssmikle_title_link: "",
+                            rssmikle_title_bgcolor: "#333333",
+                            rssmikle_title_color: "#FFFFFF",
+                            rssmikle_title_bgimage: "",
+                            rssmikle_item_bgcolor: "#FFFFFF",
+                            rssmikle_item_bgimage: "",
+                            rssmikle_item_title_length: "55",
+                            rssmikle_item_title_color: "#0066FF",
+                            rssmikle_item_border_bottom: "on",
+                            rssmikle_item_description: "content_only",
+                            item_link: "off",
+                            rssmikle_item_description_length: "150",
+                            rssmikle_item_description_color: "#666666",
+                            rssmikle_item_date: "gl1",
+                            rssmikle_timezone: "Etc/GMT",
+                            datetime_format: "%b %e, %Y %l:%M %p",
+                            item_description_style: "html",
+                            item_thumbnail: "full",
+                            item_thumbnail_selection: "auto",
+                            article_num: "15",
+                            rssmikle_item_podcast: "off",
+                            keyword_inc: "",
+                            keyword_exc: ""
+                        };
+                        feedwind_show_widget_iframe(params);
+                    })();
+                </script>
+                <div style="font-size:10px; text-align:center; width:400px;"><a href="http://feed.mikle.com/" target="_blank" style="color:#CCCCCC;">RSS Feed Widget</a>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+
 </body>
+
 </html>
