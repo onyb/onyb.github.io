@@ -13,7 +13,7 @@
   <script src="./src/grid.js"></script>
 </head>
 
-<body>
+<body onload="loadJSON()">
   <br>
 
   <header>
@@ -26,11 +26,46 @@
   <article>
     <h3>Jupyter Notebooks</h3>
     <br>
-    <p><b>OCaml</b></p>
-    <ul>
-      <li><a href="http://nbviewer.jupyter.org/github/onyb/mooca/blob/master/fun/ocaml/week_0.ipynb">Introduction and Overview</a></li>
-      <li><a href="http://nbviewer.jupyter.org/github/onyb/mooca/blob/master/fun/ocaml/week_1.ipynb">Basic types, Definitions, and Functions</a></li>
-    </ul>
+    <div id="contents"></div>
   </article>
+
+  <script type="text/javascript">
+    function loadJSON() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+          var json = JSON.parse(xhttp.responseText);
+          var contents = "";
+          for(i=0; i<json.length; i++){
+            base_uri = 'http://nbviewer.jupyter.org/github/onyb/mooca/blob/master/' + json[i]._id + '/';
+            nb_str = "<ul>";
+            for(j=0; j<json[i].notebooks.length; j++) {
+              nb_str += '<li><a href="' + base_uri + json[i].notebooks[j]._id + '.ipynb" target="_blank">' + json[i].notebooks[j].name + '</a></li>';
+            }
+            nb_str += '</ul>';
+
+            var title = '<p>' + json[i].type + ' on <a href="' + json[i].uri + '" target="_blank"><b>' + json[i].name + '</b></a>';
+            var credits = '<br>&nbsp;&nbsp;&nbsp;<small><b>Created by:</b> ' + prettyJoin(json[i].credits) + '</small>';
+            var instructors = '<br>&nbsp;&nbsp;&nbsp;<small><b>Instructors:</b> ' + prettyJoin(json[i].instructors) + '</small></p>'
+            contents += title + '\n' + credits + '\n' + instructors +'\n' + nb_str;
+          }
+
+          document.getElementById("contents").innerHTML = contents;
+        }
+      };
+      xhttp.open("GET", "https://rawgit.com/onyb/mooca/master/notebooks.json", true);
+      xhttp.send();
+    };
+
+    function prettyJoin(arr){
+      if(arr.length == 1)
+        return arr.join(",");
+      else {
+        l = arr.length;
+        sub1 = arr.slice(0, l-1);
+        return sub1.join(', ') + ', and ' + arr[l-1];
+      }
+    };
+  </script>
 </body>
 </html>
