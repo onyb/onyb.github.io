@@ -11,7 +11,9 @@
 
     <title>Anirudha Bose | ~ </title>
 
-    <script type="text/javascript" src="./src/grid.js"></script>
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
 </head>
 
 <body>
@@ -47,19 +49,20 @@
 
             <ul>
                 <li>
-                    <a href="http://onyb.blogspot.in" target="_blank">Blog</a> sporadically updated with relatively mindless things
+                    <a class="key" href="http://onyb.blogspot.in" target="_blank">Blog</a> sporadically updated with relatively mindless things
                 </li>
 
                 <li>
-                    <a href="./public/Anirudha_Bose_CV.pdf" target="_blank">Curriculum Vitae</a>
+                    <a class="key" href="./public/Anirudha_Bose_CV.pdf" target="_blank">Curriculum Vitae</a>
                 </li>
 
                 <li>
-                    <a href="mailto:ani07nov@gmail.com">Electronic mail</a>
+                    <a class="key" href="./notebooks.html">Jupyter Notebooks</a> my notes on various CS topics and MOOCs [WIP]
                 </li>
 
                 <li>
-                    <a href="./notebooks.html">Jupyter Notebooks</a> my notes on various CS topics and MOOCs [WIP]
+                    <span class="key">Electronic mail:</span>
+                    <pre><code>$ echo "YW5pMDdub3ZAZ21haWwuY29tCg==" | base64 -d</code></pre>
                 </li>
             </ul>
         </nav>
@@ -86,6 +89,8 @@
         </nav>
     </section>
 
+  <script type="text/javascript" src="./src/grid.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </body>
-
 </html>
