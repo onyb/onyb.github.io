@@ -1,22 +1,22 @@
 October 2017
-    My colleage, a "Senior Apiarist" @ BeeWare, convinced me to contribute
-    to VOC at gunpoint. VOC is a Python to Java bytecode transpiler. It's a
+    First contribution to VOC -- a Python to Java bytecode transpiler. It's a
     fun way to learn about compilers, and there are tons of things to hack on.
     https://github.com/pybee/voc
 
 
 July 2017
     Joined a weekly language school on Français Langue Étrangère (FLE).
+    Farewell to Saturdays for the next 6 months.
 
 
 April 2017
-    Ultrahack (I) 2017 @ Helsinki.
+    Ultrahack (I) 2017 @ Helsinki, Finland.
     Built an interactive webapp to estimate the amount and value of timber
-    within any geographical area drawn on a map.
+    within any geographical area drawn on a map. No one found it useful.
 
 
 January 2017
-    Started working on a semi-serious pet project inspired from a small hack I
+    Started working on a semi-serious pet project inspired by a small hack I
     did at work.
     https://github.com/onyb/reobject
 
