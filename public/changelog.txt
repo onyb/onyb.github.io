@@ -1,0 +1,18 @@
+July 2017
+    Joined a weekly language school on Français Langue Étrangère (FLE).
+
+April 2017
+    Ultrahack (I) 2017 @ Helsinki.
+    Built an interactive webapp to estimate the amount and value of timber
+    within a geographical area drawn on a map.
+
+January 2017
+    Started working on a semi-serious pet project called reobject inspired from
+    a small hack I did at work.
+    https://github.com/onyb/reobject
+
+November 2016
+    Relocated to Paris for a full-time software engineering job.
+
+August 2016
+    Graduated with a Bachelor's degree in Computer Science.
