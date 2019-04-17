@@ -115,9 +115,7 @@ a:hover #mail {
 	text-align: left;
 	line-height: 1.5em;
 }
-.about p:first-of-type {
-	text-indent: 1em;
-}
+
 .about a {
 	color: #2d818f;
 	text-decoration: none;
