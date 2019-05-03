@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i');
 @import url('http://fonts.googleapis.com/css?family=Pacifico');
+
 body {
     background-color: #f8f8f8;
     font-family: 'Lato', sans-serif;
@@ -38,12 +39,20 @@ body {
 
 .logo {
     font-family: Pacifico;
-    color: #333;
+    color: #1c336a;
     font-size: 35px;
     text-align: center;
     font-size: normal;
     margin-top: 20px;
 }
+
+.teal-highlight {
+    text-shadow: 
+      -3px 0px 3px #d1d8e0,
+       3px 0px 3px #d1d8e0,
+       6px 0px 6px #d1d8e0,
+      -6px 0px 6px #d1d8e0;
+  }
 
 .logo #bio {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -129,7 +138,6 @@ a:hover #mail {
 }
 
 .about p {
-    font-size: 16px;
     color: #555;
     font-weight: 400;
     letter-spacing: .04em;
@@ -170,11 +178,4 @@ a:hover #mail {
 .footer a {
     color: #777;
     text-decoration: none;
-}
-
-.highlight {
-    background: #7fd4d3;
-    padding-left: 5px;
-    padding-right: 5px;
-    z-index: -1;
 }
