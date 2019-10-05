@@ -140,8 +140,19 @@ a {
         }
     }
 
+    .timeline-content img {
+      max-height: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline-content img {
+        max-width: 100px;
+        padding-bottom: 10px;
+      }
+    }
+
     /*----- TIMELINE PERIOD -----*/
-    
+
     .period {
         padding: 0;
         .timeline-info {
@@ -249,7 +260,7 @@ a {
                     float: right;
                     text-align: left;
                     padding-left: 30px;
-                }    
+                }
                 > .timeline-item:nth-child(even) .timeline-info {
                     float: right;
                     text-align: left;
@@ -283,7 +294,7 @@ a {
     /*----------------------------------------------
         MOD: MARKER OUTLINE
     ----------------------------------------------*/
-        
+
         .marker-outline {
             .timeline-marker {
                 &:before {

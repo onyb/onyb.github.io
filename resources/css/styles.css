@@ -432,9 +432,12 @@ body {
   line-height: 24px;
   word-spacing: 1px;
 }
+
+/*
 .container {
   max-width: 1000px;
 }
+ */
 .mobile {
   display: none;
   margin-bottom: 60px;
@@ -671,7 +674,7 @@ body {
 }
 /* ===========  5. Projects  =========== */
 .projects {
-  padding-left: 80px;
+  padding-left: 50px;  /* 80px */
   padding-right: 50px;
 }
 .project-item {
