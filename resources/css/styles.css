@@ -279,7 +279,7 @@ h6,
   font-size: 14px;
 }
 a {
-  color: #ababab;
+  color: lightslategrey;
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
