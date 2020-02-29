@@ -3,7 +3,7 @@ module.exports = {
     title: `Anirudha Bose`,
     description: `Software Engineer at Ledger, Paris. Interested in cryptocurrencies, decentralized finance, and programmable money.  #BUIDL`,
     author: `@onyb`,
-    avatar: `https://avatars0.githubusercontent.com/u/19375569?s=460&v=4`,
+    avatar: `https://pbs.twimg.com/profile_images/1189297060580904960/xD5tSmAS_400x400.jpg`,
     siteUrl: `https://onyb.github.io`,
   },
   plugins: [
@@ -17,7 +17,7 @@ module.exports = {
               classPrefix: "language-",
               inlineCodeMarker: null,
               aliases: {},
-              showLineNumbers: false,
+              showLineNumbers: true,
               noInlineHighlight: false,
             },
           },
