@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `The Plain Gatsby`,
-    description: `A simple minimalist starter for your personal blog.`,
-    author: `@wangonya`,
+    title: `Anirudha Bose`,
+    description: `Software Engineer at Ledger, Paris. Interested in cryptocurrencies, decentralized finance, and programmable money.  #BUIDL`,
+    author: `@onyb`,
     avatar: `https://avatars0.githubusercontent.com/u/19375569?s=460&v=4`,
-    siteUrl: `https://the-plain-gatsby.netlify.com`,
+    siteUrl: `https://onyb.github.io`,
   },
   plugins: [
     {
