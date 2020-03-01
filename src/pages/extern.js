@@ -53,9 +53,7 @@ const Extern = () => (
         </div>
         <div className="title">
           <Tag className="code">[talk]</Tag>{" "}
-          <a href="https://docs.google.com/presentation/d/1NcAI7ZV6s0VCdKMS6SdXfGcSH5pHPhlH9drzJx0x4YU/edit?usp=sharing">
-            Django Paris – reobject
-          </a>
+          <a href="http://slides.com/onyb/reobject">Django Paris – reobject</a>
         </div>
       </li>
     </ul>
