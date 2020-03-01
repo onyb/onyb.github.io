@@ -1,7 +1,7 @@
 import React from "react"
 
 const Projects = () => (
-  <div>
+  <>
     <h5>Open-source projects</h5>
     <ul>
       <li>
@@ -37,7 +37,7 @@ const Projects = () => (
         sponsored by <a href="http://www.hri.res.in">HRI</a>.
       </li>
     </ul>
-  </div>
+  </>
 )
 
 export default Projects

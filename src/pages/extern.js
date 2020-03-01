@@ -7,7 +7,7 @@ const Tag = styled.span`
 `
 
 const Extern = () => (
-  <div>
+  <>
     <h5>Extern</h5>
     <ul>
       <li>
@@ -57,7 +57,7 @@ const Extern = () => (
         </div>
       </li>
     </ul>
-  </div>
+  </>
 )
 
 export default Extern
