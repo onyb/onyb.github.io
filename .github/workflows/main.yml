@@ -19,9 +19,12 @@ jobs:
         node-version: '12.16.1'
 
     - name: Setup Git
-      run: |
-        git config --global user.email "anirudha.bose@alumni.cern"
-        git config --global user.name "Anirudha Bose"
+      uses: ludeeus/action-push@0.0.1
+      env:
+        ACTION_MAIL: 'anirudha.bose@alumni.cern'
+        ACTION_NAME: 'Anirudha Bose'
+        ACTION_BRANCH: 'master'
+        ACTION_MESSAGE: 'GitHub Actions push'
 
     - name: Install dependencies
       run: yarn
