@@ -4,10 +4,10 @@ import { Link, graphql } from "gatsby"
 import DefaultLayout from "../layouts/default"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Projects from "../components/projects"
+import Extern from "../components/extern"
 
 import { groupBy, getDateYear } from "../utils"
-import Projects from "./projects"
-import Extern from "./extern"
 
 const IndexPage = ({ data }) => {
   // all posts without dates are assumed to be drafts or pages
