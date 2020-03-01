@@ -6,6 +6,8 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 
 import { groupBy, getDateYear } from "../utils"
+import Projects from "./projects"
+import Extern from "./extern"
 
 const IndexPage = ({ data }) => {
   // all posts without dates are assumed to be drafts or pages
@@ -39,6 +41,16 @@ const IndexPage = ({ data }) => {
       <section>
         <ul>{postsListContainer}</ul>
       </section>
+      <section>
+        <ul>
+          <Projects />
+        </ul>
+      </section>
+      <section>
+        <ul>
+          <Extern />
+        </ul>
+      </section>
     </DefaultLayout>
   )
 }
@@ -55,7 +67,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YY")
+            date(formatString: "MMM DD, YYYY")
             title
           }
         }
