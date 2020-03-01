@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: 
+    branches:
       - develop
 
 jobs:
@@ -12,11 +12,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
         node-version: '12.16.1'
+
+    - name: Setup Git
+      run: |
+      git config --global user.email "anirudha.bose@alumni.cern"
+      git config --global user.name "Anirudha Bose"
+
     - name: Install dependencies
       run: yarn
+
     - name: Deploy
       run: yarn deploy
