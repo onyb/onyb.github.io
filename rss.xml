@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Anirudha Bose]]></title><description><![CDATA[Software Engineer at Ledger, Paris. Interested in cryptocurrencies, decentralized finance, and programmable money.  #BUIDL]]></description><link>https://onyb.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 01 Mar 2020 00:21:22 GMT</lastBuildDate><item><title><![CDATA[About]]></title><description><![CDATA[I am Ani, a Software Engineer based in Paris. I work at Ledger,
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Anirudha Bose]]></title><description><![CDATA[Software Engineer at Ledger, Paris. Interested in cryptocurrencies, decentralized finance, and programmable money.  #BUIDL]]></description><link>https://onyb.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 01 Mar 2020 02:25:54 GMT</lastBuildDate><item><title><![CDATA[About]]></title><description><![CDATA[I am Ani, a Software Engineer based in Paris. I work at Ledger,
 in the Vault team,
 building cryptocurrency custody software for financial…]]></description><link>https://onyb.github.io/about/</link><guid isPermaLink="false">https://onyb.github.io/about/</guid><content:encoded>&lt;p&gt;I am Ani, a Software Engineer based in Paris. I work at &lt;a href=&quot;https://ledger.com&quot;&gt;Ledger&lt;/a&gt;,
 in the &lt;a href=&quot;https://ledger.com/vault&quot;&gt;Vault&lt;/a&gt; team,
@@ -29,21 +29,11 @@ programmable money.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[This
 &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
 &lt;h2&gt;List Items&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;First order list item&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Second item&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Unordered list can use asterisks&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Or minuses&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Or pluses&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;First order list item&lt;/li&gt;
+&lt;li&gt;Second item&lt;/li&gt;
+&lt;li&gt;Unordered list can use asterisks&lt;/li&gt;
+&lt;li&gt;Or minuses&lt;/li&gt;
+&lt;li&gt;Or pluses&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
 &lt;h2&gt;Code Blocks&lt;/h2&gt;
@@ -134,7 +124,7 @@ But let&amp;#39;s throw in a &amp;lt;b&amp;gt;tag&amp;lt;/b&amp;gt;.&lt;/code&gt
 &lt;a href=&quot;#fnref-2&quot; class=&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Lorem Ipsum]]></title><description><![CDATA[The standard Lorem Ipsum passage, used since the 1500s"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…]]></description><link>https://onyb.github.io/blog/lorem-ipsum/</link><guid isPermaLink="false">https://onyb.github.io/blog/lorem-ipsum/</guid><pubDate>Sun, 06 Sep 2015 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;The standard Lorem Ipsum passage, used since the 1500s&lt;/h3&gt;
+&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Lorem Ipsum]]></title><description><![CDATA[The standard Lorem Ipsum passage, used since the 1500s "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…]]></description><link>https://onyb.github.io/blog/lorem-ipsum/</link><guid isPermaLink="false">https://onyb.github.io/blog/lorem-ipsum/</guid><pubDate>Sun, 06 Sep 2015 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;The standard Lorem Ipsum passage, used since the 1500s&lt;/h3&gt;
 &lt;p&gt;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&quot;&lt;/p&gt;
 &lt;h3&gt;Section 1.10.32 of &quot;de Finibus Bonorum et Malorum&quot;, written by Cicero in 45 BC&lt;/h3&gt;
 &lt;p&gt;&quot;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&quot;&lt;/p&gt;
