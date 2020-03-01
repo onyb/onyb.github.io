@@ -20,8 +20,8 @@ jobs:
 
     - name: Setup Git
       run: |
-      git config --global user.email "anirudha.bose@alumni.cern"
-      git config --global user.name "Anirudha Bose"
+        git config --global user.email "anirudha.bose@alumni.cern"
+        git config --global user.name "Anirudha Bose"
 
     - name: Install dependencies
       run: yarn
