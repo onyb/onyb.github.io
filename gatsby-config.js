@@ -3,7 +3,7 @@ module.exports = {
     title: `Anirudha Bose`,
     description: `Software Engineer at Ledger, Paris. Interested in cryptocurrencies, decentralized finance, and programmable money.  #BUIDL`,
     author: `@onyb`,
-    avatar: `/rsz_xd5tsmas_100x100.jpg`,
+    avatar: `/avatar.jpg`,
     siteUrl: `https://anirudha.co`,
   },
   plugins: [
