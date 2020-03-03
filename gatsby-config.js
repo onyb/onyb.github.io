@@ -4,7 +4,7 @@ module.exports = {
     description: `Software Engineer at Ledger, Paris. Interested in cryptocurrencies, decentralized finance, and programmable money.  #BUIDL`,
     author: `@onyb`,
     avatar: `/rsz_xd5tsmas_100x100.jpg`,
-    siteUrl: `http://anirudha.co`,
+    siteUrl: `https://anirudha.co`,
   },
   plugins: [
     {
@@ -43,7 +43,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    `gatsby-plugin-cname`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
