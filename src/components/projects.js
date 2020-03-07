@@ -6,7 +6,7 @@ const Projects = () => (
     <ul>
       <li>
         <a href="https://github.com/onyb/littlebit">littlebit</a>: Bitcoin
-        library from scratch; with a focus on readability.
+        library from scratch; in Python and Rust.
       </li>
       <li>
         <a href="https://github.com/esowc/ecPoint-Calibrate">
