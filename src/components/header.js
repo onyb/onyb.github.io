@@ -3,28 +3,27 @@ import PropTypes from "prop-types"
 import React from "react"
 import { Location } from "@reach/router"
 
-const Header = ({ avatar }) => (
-  <header className="logo">
+const Item = (as, text, slug) =>
+  React.createElement(
+    as,
+    {
+      style: { display: "inline", paddingRight: "20px" },
+    },
+    slug ? <Link to={slug}>{text}</Link> : <span>{text}</span>
+  )
+
+const Header = () => (
+  <section>
+    {Item("h1", "Anirudha Bose")}
+
     <Location>
       {({ location }) => {
-        return location.pathname == "/" ? (
-          <div>
-            <Link to="/about/">
-              <img src={avatar} className="logo-avatar" />
-            </Link>
-            <span className="logo-prompt code">About me</span>
-          </div>
-        ) : (
-          <div>
-            <Link to="/">
-              <img src={avatar} className="logo-avatar" />
-            </Link>
-            <span className="logo-prompt code">Back Home</span>
-          </div>
-        )
+        return location.pathname == "/"
+          ? Item("div", "About", "/about/")
+          : Item("div", "Home", "/")
       }}
     </Location>
-  </header>
+  </section>
 )
 
 Header.propTypes = {
