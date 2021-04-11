@@ -12,12 +12,11 @@ const Extern = () => (
     <ul>
       <li>
         <div className="post-date code">
-          <small>Jun 18, 2020</small>
+          <small>Mar 24, 2021</small>
         </div>
         <div className="title">
-          <Tag className="code">[upcoming]</Tag>
-          <Tag className="code">[workshop]</Tag>{" "}
-          <a href="https://www.devbreak.io">
+          <Tag className="code">[talk]</Tag>{" "}
+          <a href="https://www.devbreak.io/workshop/lets-talk-elliptic-curves-and-bitcoin">
             DevBreak – Let's talk elliptic curves and bitcoin
           </a>
         </div>
