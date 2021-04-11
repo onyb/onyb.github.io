@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Anirudha Bose`,
-    description: `Software Engineer at Ledger, Paris. Interested in cryptocurrencies, decentralized finance, and programmable money.  #BUIDL`,
+    description: `Anirudha Bose. Software Engineer at Ledger, Paris. Interested in cryptocurrencies, decentralized finance, and programmable money.`,
     author: `@onyb`,
     avatar: `/avatar.jpg`,
     siteUrl: `https://anirudha.co`,
