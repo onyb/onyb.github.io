@@ -2,7 +2,7 @@ import React from "react"
 
 const Projects = () => (
   <>
-    <h5>Open Source</h5>
+    <h5>Projects / Open Source</h5>
     <ul>
       <li>
         <a href="https://github.com/onyb/littlebit">littlebit</a>: Bitcoin

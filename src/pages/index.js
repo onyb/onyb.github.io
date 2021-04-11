@@ -30,18 +30,18 @@ const IndexPage = ({ data }) => {
   return (
     <DefaultLayout>
       <SEO title="Home" />
-      <section>
+      {/* <section>
         <h5>Blog</h5>
         <ul>{postsList(posts)}</ul>
-      </section>
+      </section> */}
       <section>
         <ul>
-          <Projects />
+          <Extern />
         </ul>
       </section>
       <section>
         <ul>
-          <Extern />
+          <Projects />
         </ul>
       </section>
     </DefaultLayout>
