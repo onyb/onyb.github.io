@@ -64,13 +64,12 @@ class ChainHash {
 /**
  * Merkle Tree builder and utils
  * 
- * 
-	         root = h1234 = h(h12 + h34)
-	        /                           \
-	  h12 = h(h1 + h2)            h34 = h(h3 + h4)
-	   /            \              /            \
-	h1 = h(tx1)  h2 = h(tx2)    h3 = h(tx3)  h4 = h(tx4)
-*/
+ *	         root = h1234 = h(h12 + h34)
+ * 	        /                           \
+ *	  h12 = h(h1 + h2)            h34 = h(h3 + h4)
+ *	   /            \              /            \
+ *	h1 = h(tx1)  h2 = h(tx2)    h3 = h(tx3)  h4 = h(tx4)
+ */
 
 /**
  * Read a list of ChainHash objects and split it into chunks of 2 items.
