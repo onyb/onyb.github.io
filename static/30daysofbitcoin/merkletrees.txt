@@ -29,7 +29,7 @@ type Block = {
  * ChainHash typically represents double SHA256 of data, such as bitcoin
  * messages, transactions, etc.
  */
-class ChainHash {
+export class ChainHash {
   hash: Buffer
 
   constructor(hash: string | Buffer) {
@@ -74,7 +74,7 @@ class ChainHash {
 /**
  * Read a list of ChainHash objects and split it into chunks of 2 items.
  */
-const toPairs = (transactions: ChainHash[]): ChainHash[][] =>
+export const toPairs = (transactions: ChainHash[]): ChainHash[][] =>
   Array.from(Array(Math.ceil(transactions.length / 2)), (_, i) =>
     transactions.slice(i * 2, i * 2 + 2)
   )
@@ -83,7 +83,7 @@ const toPairs = (transactions: ChainHash[]): ChainHash[][] =>
  * Returns the hash of the best (tip) block in the most-work fully-validated
  * chain.
  */
-const getBestBlockHash = (): Promise<ChainHash> =>
+export const getBestBlockHash = (): Promise<ChainHash> =>
   fetch(`https://blockchain.info/q/latesthash?cors=true`)
     .then(r => r.text())
     .then(h => new ChainHash(h))
@@ -92,7 +92,7 @@ const getBestBlockHash = (): Promise<ChainHash> =>
  * Fetch raw block data and return the merkle root and transaction hashes
  * contained in the block.
  */
-const getBlock = (blockHash: ChainHash): Promise<Block> =>
+export const getBlock = (blockHash: ChainHash): Promise<Block> =>
   fetch(`https://blockchain.info/rawblock/${blockHash.toString()}?cors=true`)
     .then(r => r.json())
     .then(
@@ -113,7 +113,7 @@ const getBlock = (blockHash: ChainHash): Promise<Block> =>
  *
  * This is a helper function used to aid in the generation of a merkle tree.
  */
-const hashMerkleBranches = (pair: ChainHash[]): ChainHash => {
+export const hashMerkleBranches = (pair: ChainHash[]): ChainHash => {
   const [left, right = left] = pair
   const concatChainHash = left.reverse().concat(right.reverse())
   return new ChainHash(doubleSHA256(concatChainHash.hash)).reverse()
@@ -155,4 +155,4 @@ const driver = async () => {
     : console.error(`✖ Merkle root is invalid. got=${got} want=${want}`)
 }
 
-driver()
+// driver()
