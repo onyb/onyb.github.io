@@ -8,6 +8,12 @@ const Tag = styled.span`
 
 const items = [
   {
+    date: "July, 2021",
+    tags: ["talk"],
+    title: "Browsers3000 – A Brave New Wallet",
+    href: "https://blog.ipfs.io/brave-new-wallet",
+  },
+  {
     date: "Apr 10, 2021",
     tags: ["series"],
     title: "#30DaysOfBitcoin",
