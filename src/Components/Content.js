@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import AboutMe from './AboutMe'
 import Timeline from './Timeline'
+import Work from './Work'
 
 const Content = () => {
     return (
@@ -11,6 +12,7 @@ const Content = () => {
                 <Right>
                     <AboutMe />
                     <Timeline />
+                    <Work />
                 </Right>
             </Wrap>
         </div>
