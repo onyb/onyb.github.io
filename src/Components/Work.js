@@ -25,16 +25,17 @@ const Wrapper = styled.div`
     grid-gap: 30px;
     margin-left: -30px;
     padding: 10px 0 15px 0;
+    margin-bottom: 10px;
 `
 
 const Wrap = styled.div`
     -webkit-column-count: 2;
-    -webkit-column-gap: 1rem;
-    -webkit-column-fill: auto;
     -moz-column-count: 2;
-    -moz-column-gap: 1rem;
-    -moz-column-fill: auto;
     column-count: 2;
-    column-gap: 1rem;
+    -webkit-column-gap: 15px;
+    -moz-column-gap: 15px;
+    column-gap: 15px;
+    -webkit-column-fill: auto;
+    -moz-column-fill: auto;
     column-fill: auto;
 `

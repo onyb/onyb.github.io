@@ -27,6 +27,10 @@ const Wrap = styled.div`
     padding: 15px;
     background-color: var(--medium-gray);
     color: var(--dark-gray);
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
+    margin-bottom: 15px;
 `
 
 const Title = styled.div`
