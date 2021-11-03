@@ -35,6 +35,10 @@ const Card = styled.div`
     & :last-child {
         margin-bottom: 0;
     }
+
+    @media (max-width: 768px) {
+        border-radius: 10px;
+    }
 `
 
 const Wrap = styled.div`
@@ -60,4 +64,8 @@ const Image = styled.div`
     height: 100%;
     width: 150px;
     background-color: red;
+
+    @media (max-width: 768px) {
+        border-radius: 5px;
+    }
 `

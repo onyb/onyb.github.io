@@ -38,4 +38,11 @@ const Wrap = styled.div`
     -webkit-column-fill: auto;
     -moz-column-fill: auto;
     column-fill: auto;
+
+    @media (max-width: 768px) {
+        border-radius: 5px;
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
 `

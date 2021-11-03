@@ -31,6 +31,10 @@ const Wrap = styled.div`
     -moz-column-break-inside: avoid;
     column-break-inside: avoid;
     margin-bottom: 15px;
+
+    @media (max-width: 768px) {
+        border-radius: 10px;
+    }
 `
 
 const Title = styled.div`

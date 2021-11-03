@@ -6,6 +6,7 @@
     --light-gary: #6c757d;
     --medium-gray: #c9c9c9;
     --lighter-gray: #F4F4F2;
+    font-size: 16px;
 }
 
 body {
@@ -28,4 +29,14 @@ body {
     grid-template-columns: 30px 1fr;
     grid-gap: 30px;
     margin-left: -30px;
+}
+
+@media (max-width: 768px) {
+    :root {
+        font-size: 14px;
+    }
+    .App {
+        width: 90vw;
+        margin: 100px 0 0 5vw;
+    }
 }
