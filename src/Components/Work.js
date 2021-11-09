@@ -44,7 +44,6 @@ const Wrap = styled.div`
     column-fill: auto;
 
     @media (max-width: 768px) {
-        border-radius: 5px;
         -webkit-column-count: 1;
         -moz-column-count: 1;
         column-count: 1;
