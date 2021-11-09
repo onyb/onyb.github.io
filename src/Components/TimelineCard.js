@@ -31,6 +31,9 @@ const Card = styled.div`
     padding: 15px;
     letter-spacing: .05rem;
     margin-bottom: 15px;
+    background-color: var(--lighter-gray);
+    /* box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2); */
+    box-shadow: 0 7px 30px -10px rgba(150,170,180,0.5);
 
     & :last-child {
         margin-bottom: 0;
