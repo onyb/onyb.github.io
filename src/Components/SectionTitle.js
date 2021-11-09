@@ -23,6 +23,11 @@ const Title = styled.div`
     white-space: nowrap;
     display: block;
     background-color: var(--dark-gray);
+    user-select: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
     
     & h1 {
         line-height: 30px;
