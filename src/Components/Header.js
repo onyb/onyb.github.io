@@ -18,4 +18,9 @@ const Name = styled.div`
     letter-spacing: .2rem;
     text-transform: uppercase;
     padding: 10px 30px;
+    user-select: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
 `
