@@ -5,6 +5,7 @@ import TimelineCard from './TimelineCard'
 
 const Year = ({year}) => {
     return (
+        <div>
             <Wrapper>
                 <SectionTitle
                     rightTitle = {year}
@@ -14,6 +15,7 @@ const Year = ({year}) => {
                     <TimelineCard></TimelineCard>
                 </Wrap>
             </Wrapper>
+        </div>
     )
 }
 

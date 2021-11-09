@@ -5,19 +5,21 @@ import ProjectCard from './ProjectCard'
 
 const Work = () => {
     return (
-        <Wrapper>
-            <SectionTitle
-                rightTitle = 'Work'
-            />
-            <Wrap>
-                <ProjectCard
-                    link = ''
-                    title = 'littlebit'
-                    summary = 'Bitcoin library from scratch'
-                    tags = {['Python', 'Rust']}
+        <div>
+            <Wrapper>
+                <SectionTitle
+                    rightTitle = 'Work'
                 />
-            </Wrap>
-        </Wrapper>
+                <Wrap>
+                    <ProjectCard
+                        link = ''
+                        title = 'littlebit'
+                        summary = 'Bitcoin library from scratch'
+                        tags = {['Python', 'Rust']}
+                    />
+                </Wrap>
+            </Wrapper>
+        </div>
     )
 }
 

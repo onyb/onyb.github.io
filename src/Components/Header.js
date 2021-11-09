@@ -3,7 +3,9 @@ import styled from 'styled-components'
 
 const Header = () => {
 return (
-        <Name>Anirudha Bose</Name>
+        <div>
+            <Name>Anirudha Bose</Name>
+        </div>
     )
 }
 

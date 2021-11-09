@@ -3,9 +3,11 @@ import styled from 'styled-components'
 
 const SectionTitle = ({rightTitle}) => {
     return (
-        <Title>
-            <h1>{rightTitle}</h1>
-        </Title>
+        <div>
+            <Title>
+                <h1>{rightTitle}</h1>
+            </Title>
+        </div>
     )
 }
 

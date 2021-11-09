@@ -3,7 +3,9 @@ import styled from 'styled-components'
 
 const Tag = () => {
     return (
-        <Wrap>Talk</Wrap>
+        <div>
+            <Wrap>Talk</Wrap>
+        </div>
     )
 }
 
