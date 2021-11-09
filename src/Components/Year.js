@@ -3,11 +3,13 @@ import styled from 'styled-components'
 import SectionTitle from './SectionTitle'
 import TimelineCard from './TimelineCard'
 
-const Year = () => {
+const Year = ({year}) => {
     return (
         <div>
             <Wrapper>
-                <SectionTitle></SectionTitle>
+                <SectionTitle
+                    rightTitle = {year}
+                />
                 <Wrap>
                     <TimelineCard></TimelineCard>
                     <TimelineCard></TimelineCard>

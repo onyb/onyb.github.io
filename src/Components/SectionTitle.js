@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const SectionTitle = () => {
+const SectionTitle = ({rightTitle}) => {
     return (
         <div>
             <Title>
-                <h1>About Me</h1>
+                <h1>{rightTitle}</h1>
             </Title>
         </div>
     )

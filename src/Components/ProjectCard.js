@@ -2,15 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import Tag from './Tag'
 
-const ProjectCard = () => {
+const ProjectCard = ({link, title, summary, tags}) => {
+    console.log(tags)
     return (
         <div>
             <Wrap>
-                <Title>littlebit</Title>
-                <Summary>Bitcoin library from scratch</Summary>
+                <Title>{title}</Title>
+                <Summary>{summary}</Summary>
                 <Tags>
-                    <Tag></Tag>
-                    <Tag></Tag>
+                    <Tag/>
                 </Tags>
             </Wrap>
         </div>

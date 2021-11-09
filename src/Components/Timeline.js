@@ -4,8 +4,12 @@ import Year from './Year'
 const Timeline = () => {
     return (
         <div>
-            <Year></Year>
-            <Year></Year>
+            <Year
+                year = '2021'
+            />
+            <Year
+                year = '2020'
+            />
         </div>
     )
 }

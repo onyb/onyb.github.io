@@ -7,10 +7,16 @@ const Work = () => {
     return (
         <div>
             <Wrapper>
-                <SectionTitle></SectionTitle>
+                <SectionTitle
+                    rightTitle = 'Work'
+                />
                 <Wrap>
-                    <ProjectCard></ProjectCard>
-                    <ProjectCard></ProjectCard>
+                    <ProjectCard
+                        link = ''
+                        title = 'littlebit'
+                        summary = 'Bitcoin library from scratch'
+                        tags = {['Python', 'Rust']}
+                    />
                 </Wrap>
             </Wrapper>
         </div>
