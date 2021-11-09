@@ -5,17 +5,15 @@ import TimelineCard from './TimelineCard'
 
 const Year = ({year}) => {
     return (
-        <div>
-            <Wrapper>
-                <SectionTitle
-                    rightTitle = {year}
-                />
-                <Wrap>
-                    <TimelineCard></TimelineCard>
-                    <TimelineCard></TimelineCard>
-                </Wrap>
-            </Wrapper>
-        </div>
+        <Wrapper>
+            <SectionTitle
+                rightTitle = {year}
+            />
+            <Wrap>
+                <TimelineCard></TimelineCard>
+                <TimelineCard></TimelineCard>
+            </Wrap>
+        </Wrapper>
     )
 }
 

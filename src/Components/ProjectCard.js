@@ -5,19 +5,17 @@ import Tag from './Tag'
 const ProjectCard = ({link, title, summary, tags}) => {
     console.log(tags)
     return (
-        <div>
-            <LinkWrap>
-                <a href=''>
-                    <Wrap>
-                        <Title>{title}</Title>
-                        <Summary>{summary}</Summary>
-                        <Tags>
-                            <Tag/>
-                        </Tags>
-                    </Wrap>
-                </a>
-            </LinkWrap>
-        </div>
+        <LinkWrap>
+            <a href=''>
+                <Wrap>
+                    <Title>{title}</Title>
+                    <Summary>{summary}</Summary>
+                    <Tags>
+                        <Tag/>
+                    </Tags>
+                </Wrap>
+            </a>
+        </LinkWrap>
     )
 }
 

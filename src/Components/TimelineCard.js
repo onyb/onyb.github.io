@@ -4,19 +4,17 @@ import Tag from './Tag'
 
 const TimelineCard = () => {
     return (
-        <div>
-            <Card>
-                <Wrap>
-                    <Title>Browsers 3000</Title>
-                    <Summary>A Brave New Wallet. Who will benifit from it and who won't. Write something more about this event.</Summary>
-                    <Tags>
-                        <Tag></Tag>
-                        <Tag></Tag>
-                    </Tags>
-                </Wrap>
-                <Image></Image>
-            </Card>
-        </div>
+        <Card>
+            <Wrap>
+                <Title>Browsers 3000</Title>
+                <Summary>A Brave New Wallet. Who will benifit from it and who won't. Write something more about this event.</Summary>
+                <Tags>
+                    <Tag></Tag>
+                    <Tag></Tag>
+                </Tags>
+            </Wrap>
+            <Image></Image>
+        </Card>
     )
 }
 

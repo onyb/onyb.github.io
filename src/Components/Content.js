@@ -6,16 +6,14 @@ import Work from './Work'
 
 const Content = () => {
     return (
-        <div>
-            <Wrap>
-                <Left />
-                <Right>
-                    <AboutMe />
-                    <Timeline />
-                    <Work />
-                </Right>
-            </Wrap>
-        </div>
+        <Wrap>
+            <Left />
+            <Right>
+                <AboutMe />
+                <Timeline />
+                <Work />
+            </Right>
+        </Wrap>
     )
 }
 
