@@ -35,7 +35,6 @@ const Card = styled.div`
   display: grid;
   grid-template-columns: 1fr 150px;
   grid-gap: 20px;
-  background-color: var(--medium-gray);
   color: var(--dark-gray);
   padding: 15px;
   letter-spacing: 0.05rem;
@@ -44,6 +43,15 @@ const Card = styled.div`
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
     0 15px 40px rgba(166, 173, 201, 0.2);
   /*box-shadow: 0 7px 30px -10px rgba(150,170,180,0.5); */
+
+  & a {
+    text-decoration: underline;
+    color: var(--dark-gray);
+    text-underline-offset: 2px;
+  }
+  & a:hover {
+    text-decoration: none;
+  }
 
   & :last-child {
     margin-bottom: 0;
@@ -74,9 +82,14 @@ const Tags = styled.div`
 `
 
 const Image = styled.div`
+  background-color: var(--lighter-gray);
+  border-radious: 5px;
   height: 100%;
   width: 150px;
   background-image: url(${(props) => props.img});
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 
   @media (max-width: 768px) {
     border-radius: 5px;

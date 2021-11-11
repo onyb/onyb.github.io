@@ -21,6 +21,13 @@ const SegmentContent = styled.div`
     letter-spacing: 0.05rem;
     line-height: 1.5rem;
   }
+  & p a {
+    color: var(--dark-gray);
+    text-underline-offset: 2px;
+  }
+  & p a:hover {
+    text-decoration: none;
+  }
   & p:first-child {
     padding-top: 0;
     margin-top: 0;

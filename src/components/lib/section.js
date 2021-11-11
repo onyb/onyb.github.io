@@ -32,7 +32,7 @@ const Title = styled.div`
   & h1 {
     line-height: 30px;
     color: var(--light-gray);
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 300;
     padding: 0;
     margin: 0;

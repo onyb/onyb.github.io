@@ -54,7 +54,16 @@ const Title = styled.div`
   font-weight: 500;
 `
 
-const Summary = styled.div``
+const Summary = styled.div`
+  & a {
+    text-decoration: underline;
+    color: var(--dark-gray);
+    text-underline-offset: 2px;
+  }
+  & a:hover {
+    text-decoration: none;
+  }
+`
 
 const Tags = styled.div`
   display: flex;
