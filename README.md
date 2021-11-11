@@ -1,51 +1,70 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  The Plain Gatsby
-</h1>
+# Getting Started with Create React App
 
-A minimalist Gatsby starter for your blog. [Demo](https://the-plain-gatsby.netlify.com/).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Inspired by [Heiswayi Nrird](https://github.com/heiswayi)'s [the-plain](https://github.com/heiswayi/the-plain).
+## Available Scripts
 
-![home-page-screenshot](https://i.postimg.cc/7YPxnrJM/Screenshot-2019-05-25-at-18-33-36.png)
+In the project directory, you can run:
 
-![about-page-screenshot](https://i.postimg.cc/SK9qxyHq/Screenshot-2019-05-25-at-18-34-12.png)
+### `yarn start`
 
-![blog-page-screenshot](https://i.postimg.cc/CxzS9CNR/Screenshot-2019-05-25-at-18-34-00.png)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Quick Start 🚀
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-1.  **Create a Gatsby site.**
+### `yarn test`
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-    ```sh
-    # create a new Gatsby site using the-plain-gatsby starter
-    gatsby new my-blog https://github.com/wangonya/the-plain-gatsby
-    ```
+### `yarn build`
 
-2.  **Start developing.**
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-    Navigate into your new site’s directory and start it up.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-    ```sh
-    cd my-blog/
-    gatsby develop
-    ```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-3.  **Open the source code and start editing!**
+### `yarn eject`
 
-    Your site is now running at `http://localhost:8000`!
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-    Open the `my-blog` directory in your code editor of choice and edit `src/pages/about.md`. Save your changes and the browser will update in real time!
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-    Edit `gatsby.config.js` to update site metadata.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-    Add blog posts in markdown in `src/pages/blog/`. Each blog should have a `title` and `date` frontmatter. Example blog posts have been provided.
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
