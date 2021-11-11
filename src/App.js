@@ -1,14 +1,13 @@
-import React from "react"
-import Content from "./Components/Content"
-import Header from './Components/Header'
+import React from 'react'
+
+import Homepage from './components/homepage'
 
 const App = () => {
   return (
     <div className="App">
-      <Header />
-      <Content></Content>
+      <Homepage />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
