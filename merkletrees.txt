@@ -1,0 +1,158 @@
+import fetch from "node-fetch"
+import * as crypto from "crypto"
+
+/**
+ * Crypto utilities
+ */
+
+const sha256 = (preimage: Buffer): Buffer =>
+  crypto.createHash("sha256").update(preimage).digest()
+
+const doubleSHA256 = (preimage: Buffer): Buffer => {
+  return sha256(sha256(preimage))
+}
+
+/**
+ * Type declarations
+ */
+
+/**
+ * Block represents parsed block data, notably the Merkle Root and the
+ * containing transaction hashes.
+ */
+type Block = {
+  merkleRoot: ChainHash
+  transactions: ChainHash[]
+}
+
+/**
+ * ChainHash typically represents double SHA256 of data, such as bitcoin
+ * messages, transactions, etc.
+ */
+export class ChainHash {
+  hash: Buffer
+
+  constructor(hash: string | Buffer) {
+    this.hash = typeof hash === "string" ? Buffer.from(hash, "hex") : hash
+  }
+
+  /**
+   * Returns hexadecimal string representation the ChainHash.
+   */
+  toString(): string {
+    return this.hash.toString("hex")
+  }
+
+  /**
+   * Returns a new ChainHash containing the byte-reversed hash.
+   *
+   * Useful for reading a ChainHash in little-endian format.
+   */
+  reverse(): ChainHash {
+    return new ChainHash(this.toString().match(/../g).reverse().join(""))
+  }
+
+  /**
+   * Returns a new ChainHash by concatenating it with the specified ChainHash.
+   */
+  concat(other: ChainHash): ChainHash {
+    const hash = Buffer.concat([this.hash, other.hash])
+    return new ChainHash(hash)
+  }
+}
+
+/**
+ * Merkle Tree builder and utils
+ * 
+ *	         root = h1234 = h(h12 + h34)
+ * 	        /                           \
+ *	  h12 = h(h1 + h2)            h34 = h(h3 + h4)
+ *	   /            \              /            \
+ *	h1 = h(tx1)  h2 = h(tx2)    h3 = h(tx3)  h4 = h(tx4)
+ */
+
+/**
+ * Read a list of ChainHash objects and split it into chunks of 2 items.
+ */
+export const toPairs = (transactions: ChainHash[]): ChainHash[][] =>
+  Array.from(Array(Math.ceil(transactions.length / 2)), (_, i) =>
+    transactions.slice(i * 2, i * 2 + 2)
+  )
+
+/**
+ * Returns the hash of the best (tip) block in the most-work fully-validated
+ * chain.
+ */
+export const getBestBlockHash = (): Promise<ChainHash> =>
+  fetch(`https://blockchain.info/q/latesthash?cors=true`)
+    .then(r => r.text())
+    .then(h => new ChainHash(h))
+
+/**
+ * Fetch raw block data and return the merkle root and transaction hashes
+ * contained in the block.
+ */
+export const getBlock = (blockHash: ChainHash): Promise<Block> =>
+  fetch(`https://blockchain.info/rawblock/${blockHash.toString()}?cors=true`)
+    .then(r => r.json())
+    .then(
+      block =>
+        <Block>{
+          merkleRoot: new ChainHash(block.mrkl_root),
+          transactions: block.tx.map(tx => new ChainHash(tx.hash)),
+        }
+    )
+
+/**
+ * hashMerkleBranches takes two ChainHash items, treated as the left and right
+ * tree nodes, and returns the hash of their concatenation.
+ *
+ * The hash function used is Double-SHA256, and the preimage must be provided
+ * little-endian format. If there is no right tree node, we hash the left node
+ * to itself.
+ *
+ * This is a helper function used to aid in the generation of a merkle tree.
+ */
+export const hashMerkleBranches = (pair: ChainHash[]): ChainHash => {
+  const [left, right = left] = pair
+  const concatChainHash = left.reverse().concat(right.reverse())
+  return new ChainHash(doubleSHA256(concatChainHash.hash)).reverse()
+}
+
+/**
+ * Build the Merkle Root from a list of transactions ChainHash objects.
+ *
+ * This algorithm works recursively, so the JS runtime may have restrictions
+ * on the stack size.
+ */
+const buildMerkleRoot = (transactions: ChainHash[]): ChainHash =>
+  transactions.length === 1
+    ? transactions[0]
+    : buildMerkleRoot(
+        toPairs(transactions).reduce(
+          (tree, pair) => [...tree, hashMerkleBranches(pair)],
+          []
+        )
+      )
+
+const driver = async () => {
+  const blockHash = await getBestBlockHash()
+  console.log(`Best block hash: ${blockHash.toString()}`)
+
+  const block = await getBlock(blockHash)
+  const want = block.merkleRoot.toString()
+  console.log(`Merkle root: ${want}`)
+  console.log(`Transactions:`)
+  console.dir(
+    block.transactions.map(tx => tx.toString()),
+    {maxArrayLength: 5}
+  )
+
+  const got = buildMerkleRoot(block.transactions).toString()
+
+  got === want
+    ? console.log("✓ Merkle root is valid.")
+    : console.error(`✖ Merkle root is invalid. got=${got} want=${want}`)
+}
+
+// driver()
