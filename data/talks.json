@@ -1,0 +1,34 @@
+{
+  "list": [
+    {
+      "name":"Filecoin Orbit - Web3 browsers",
+      "url":"https://twitter.com/onybose/status/1451290887573565468",
+      "date": "2021-10-22"
+    },
+    {
+      "name":"Browsers3000 - A Brave New Wallet",
+      "url":"https://blog.ipfs.io/brave-new-wallet",
+      "date": "2021-07-09"
+    },
+    {
+      "name":"DevBreak - Let's talk elliptic curves and bitcoin",
+      "url":"https://www.devbreak.io/workshop/lets-talk-elliptic-curves-and-bitcoin",
+      "date": "2021-03-24"
+    },
+    {
+      "name":"Paris P2P Festival - Demystifying the cryptography behind bitcoin",
+      "url":"https://onyb.gitbook.io/secp256k1-python",
+      "date": "2020-01-10"
+    },
+    {
+      "name":"ESoWC Day @ ECMWF - Introducing ecPoint Calibrate",
+      "url":"https://docs.google.com/presentation/d/1NcAI7ZV6s0VCdKMS6SdXfGcSH5pHPhlH9drzJx0x4YU/edit?usp=sharing",
+      "date": "2019-09-20"
+    },
+    {
+      "name": "Django Paris - reobject",
+      "url": "https://slides.com/onyb/reobject",
+      "date": "2018-02-18"
+    }
+  ]
+}
