@@ -1,6 +1,21 @@
 {
   "list": [
     {
+      "name": "ETH Gathering - What the Hex!",
+      "url": "https://ethgathering2022.sched.com/event/1DxZi/what-the-hex",
+      "date": "2022-11-19"
+    },
+    {
+      "name": "ETHBrno - Do NOT sign gibberish!",
+      "url": "https://ethbrno.cz",
+      "date": "2022-11-12"
+    },
+    {
+      "name": "IPFS Camp - Making Brave an InterPlanetary browser",
+      "url": "https://twitter.com/dietrich/status/1586302623371919360",
+      "date": "2022-10-29"
+    },
+    {
       "name":"Futurama - Web3 Wallets 101",
       "url": "https://twitter.com/FuturamaWeb3/status/1554373853576450048",
       "date": "2022-08-05"
