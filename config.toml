@@ -37,8 +37,8 @@ copyright = "Anirudha Bose"
   mainSection = "posts"
   mainSectionTitle = "Blog"
   tagsOverview = false
-  tocInline = true
-  showAllPostsOnHomePage = true
+  tocInline = false
+  showAllPostsOnHomePage = false
   showProjectsList = false
 
   [[params.social]]
