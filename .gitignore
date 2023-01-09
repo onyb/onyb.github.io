@@ -28,3 +28,4 @@ yarn-error.log*
 # hugo
 .hugo_build.lock
 resources
+/public
