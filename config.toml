@@ -34,13 +34,6 @@ copyright = "Anirudha Bose"
     unsafe= true
 
 [params]
-  mainSection = "posts"
-  mainSectionTitle = "Blog"
-  tagsOverview = false
-  tocInline = false
-  showAllPostsOnHomePage = false
-  showProjectsList = false
-
   [[params.social]]
     name = "twitter"
     link = "https://twitter.com/onybose"
