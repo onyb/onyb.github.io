@@ -1,6 +1,11 @@
 {
   "list": [
     {
+      "name": "Brave Wallet: Safer Signing for Sign-In With Ethereum and CoW Swap",
+      "url": "https://brave.com/1.60-siwe-cow",
+      "date": "2023-11-10"
+    },
+    {
       "name": "Towards a safer signing experience on Brave Wallet",
       "url": "https://brave.com/safer-signing",
       "date": "2022-10-26"
