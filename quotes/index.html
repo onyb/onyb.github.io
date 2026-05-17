@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Anirudha Bose</title>
+  <title>quotes · Anirudha Bose</title>
   <meta name="description" content="Anirudha (Ani) Bose — staff engineer working on Web3, wallets, and cryptography.">
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2214%22>·</text></svg>">
@@ -17,7 +17,7 @@
     })();
   </script>
 </head>
-<body class="">
+<body class=" quotes">
   <!--
     hi, hacker. source is at https://github.com/onyb/onyb.github.io
     no trackers, no analytics, no cookies. just html.
@@ -25,41 +25,50 @@
   <main>
     <nav class="site-nav">
   
-  <span class="current">home</span>
+  <a href="/">home</a>
   <a href="/talks/">talks</a>
   <a href="/writing/">writing</a>
-  <a href="/quotes/">quotes</a>
+  <span class="current">quotes</span>
 </nav>
 
-    <section class="bio">
-  <h1>Hi! My name is Ani.</h1>
+    <h1 class="visually-hidden">quotes</h1>
 
-  <p>
-    Web3 is taking the world by storm — one block at a time. My mission is to
-    transform complex blockchain protocols into intuitive and enjoyable
-    experiences. I firmly believe that money should be non-custodial, and its
-    security properties should be underpinned by math.
-  </p>
+<article class="quote-card" id="quote-card" hidden>
+  <span class="qc-corner qc-tl" aria-hidden="true"></span>
+  <span class="qc-corner qc-tr" aria-hidden="true"></span>
+  <span class="qc-corner qc-bl" aria-hidden="true"></span>
+  <span class="qc-corner qc-br" aria-hidden="true"></span>
+  <span class="qc-bookmark" aria-hidden="true"></span>
 
-  <p>
-    I'm a Staff Engineer at <a href="https://brave.com">Brave</a>, where I work
-    on Web3 initiatives, notably the multi-chain
-    <a href="https://brave.com/wallet">Brave Wallet</a>.
-  </p>
+  <svg class="qc-number" id="qc-number" aria-hidden="true" viewBox="0 0 100 40" preserveAspectRatio="xMaxYMin meet">
+    <text x="100" y="34" text-anchor="end"
+          font-family="Arial, Helvetica, sans-serif"
+          font-weight="700" font-size="36"
+          fill="none" stroke="currentColor" stroke-width="1"
+          stroke-linejoin="round" stroke-linecap="round">001</text>
+  </svg>
 
-  <p><b>Past lives:</b></p>
-  <ul>
-    <li>
-      <a href="https://ledger.com">Ledger</a>: helped whales secure billions and billions of dollars in crypto assets.
-    </li>
-    <li>
-      <a href="https://home.cern">CERN</a>: performed satanic rituals around the <a href="https://en.wikipedia.org/wiki/Large_Hadron_Collider">Large Hadron Collider</a>.
-    </li>
-    <li>
-      <a href="http://www.hri.res.in">HRI</a>: learned that quantum physics is hard, and teleportation is real.
-    </li>
-  </ul>
-</section>
+  <blockquote class="qc-text" id="qc-text">—</blockquote>
+  <hr class="qc-rule">
+  <div class="qc-author" id="qc-author">—</div>
+  <div class="qc-meta" id="qc-meta"></div>
+</article>
+
+<nav class="qc-controls" id="qc-controls" aria-label="Quote navigation" hidden>
+  <button id="btn-prev" type="button">← prev</button>
+  <button id="btn-random" type="button">random</button>
+  <button id="btn-next" type="button">next →</button>
+</nav>
+
+<p class="qc-hint">
+  <kbd>←</kbd> <kbd>→</kbd> navigate · <kbd>r</kbd> shuffle
+</p>
+
+<noscript>
+  <p class="dim">Quotes need JavaScript to render. Sorry, hacker — this one's not pure HTML.</p>
+</noscript>
+
+<script src="./quotes.js" defer></script>
 
     <footer class="site-footer">
       <a class="social" href="https://x.com/onybose" rel="me" aria-label="X (formerly Twitter)" title="X">
