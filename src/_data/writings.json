@@ -1,0 +1,19 @@
+{
+  "list": [
+    {
+      "title": "Brave Wallet: Safer Signing for Sign-In With Ethereum and CoW Swap",
+      "date": "2023-11-10",
+      "external": "https://brave.com/1.60-siwe-cow"
+    },
+    {
+      "title": "Towards a safer signing experience on Brave Wallet",
+      "date": "2022-10-26",
+      "external": "https://brave.com/safer-signing"
+    },
+    {
+      "title": "Personal sovereignty with Ledger SatStack",
+      "date": "2020-12-08",
+      "external": "https://web.archive.org/web/20210117095644/https://blog.ledger.com/satstack"
+    }
+  ]
+}

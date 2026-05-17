@@ -1,0 +1,44 @@
+---
+layout: base.njk
+pageTitle: quotes
+permalink: /quotes/index.html
+pageClass: quotes
+---
+<h1 class="visually-hidden">quotes</h1>
+
+<article class="quote-card" id="quote-card" hidden>
+  <span class="qc-corner qc-tl" aria-hidden="true"></span>
+  <span class="qc-corner qc-tr" aria-hidden="true"></span>
+  <span class="qc-corner qc-bl" aria-hidden="true"></span>
+  <span class="qc-corner qc-br" aria-hidden="true"></span>
+  <span class="qc-bookmark" aria-hidden="true"></span>
+
+  <svg class="qc-number" id="qc-number" aria-hidden="true" viewBox="0 0 100 40" preserveAspectRatio="xMaxYMin meet">
+    <text x="100" y="34" text-anchor="end"
+          font-family="Arial, Helvetica, sans-serif"
+          font-weight="700" font-size="36"
+          fill="none" stroke="currentColor" stroke-width="1"
+          stroke-linejoin="round" stroke-linecap="round">001</text>
+  </svg>
+
+  <blockquote class="qc-text" id="qc-text">—</blockquote>
+  <hr class="qc-rule">
+  <div class="qc-author" id="qc-author">—</div>
+  <div class="qc-meta" id="qc-meta"></div>
+</article>
+
+<nav class="qc-controls" id="qc-controls" aria-label="Quote navigation" hidden>
+  <button id="btn-prev" type="button">← prev</button>
+  <button id="btn-random" type="button">random</button>
+  <button id="btn-next" type="button">next →</button>
+</nav>
+
+<p class="qc-hint">
+  <kbd>←</kbd> <kbd>→</kbd> navigate · <kbd>r</kbd> shuffle
+</p>
+
+<noscript>
+  <p class="dim">Quotes need JavaScript to render. Sorry, hacker — this one's not pure HTML.</p>
+</noscript>
+
+<script src="./quotes.js" defer></script>

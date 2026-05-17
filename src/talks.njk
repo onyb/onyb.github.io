@@ -1,0 +1,27 @@
+---
+layout: base.njk
+pageTitle: talks
+permalink: /talks/index.html
+wide: true
+---
+<h1>talks</h1>
+<p class="lede">
+  Slides, recordings, and post-mortems from things I've said out loud at
+  conferences and meetups. Reverse chronological — newest mistakes first.
+</p>
+
+{% for group in talks.list | byYearDesc %}
+  <h2 class="year">{{ group.year }}</h2>
+  <ul class="entries">
+    {% for t in group.list %}
+      {%- set primary = t.links[0] -%}
+      <li>
+        {% if primary %}<a class="title" href="{{ primary.url }}">{{ t.title }}</a>{% else %}<span class="title">{{ t.title }}</span>{% endif %}
+        <span class="meta">
+          {% if t.venue %}<span class="venue">{{ t.venue }}</span>{% endif %}
+          {% if t.links and t.links.length %}<span class="links">{% for l in t.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</span>{% endif %}
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}

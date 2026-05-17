@@ -1,0 +1,16 @@
+{
+  "list": [
+    {
+      "text": "The best way to predict the future is to invent it.",
+      "author": "Alan Kay",
+      "work": "1971 Xerox PARC talk",
+      "date": "1971"
+    },
+    {
+      "text": "Talk is cheap. Show me the code.",
+      "author": "Linus Torvalds",
+      "work": "linux-kernel mailing list",
+      "date": "August 2000"
+    }
+  ]
+}

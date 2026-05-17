@@ -1,0 +1,28 @@
+---
+layout: base.njk
+pageTitle: writing
+permalink: /writing/index.html
+wide: true
+---
+<h1>writing</h1>
+<p class="lede">
+  Long-form writeups about wallets, signing, and the dark corners of crypto
+  UX. Some hosted here, most published elsewhere.
+</p>
+
+{% for group in writings.list | byYearDesc %}
+  <h2 class="year">{{ group.year }}</h2>
+  <ul class="entries">
+    {% for w in group.list %}
+      <li>
+        {% if w.external %}
+          <a class="title" href="{{ w.external }}">{{ w.title }}</a>
+          <span class="meta"><span class="host">{{ w.external | host }}</span></span>
+        {% else %}
+          <a class="title" href="/writing/{{ w.slug }}/">{{ w.title }}</a>
+          <span class="meta">{% if w.kind %}<span class="kind">{{ w.kind }}</span>{% endif %}</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}

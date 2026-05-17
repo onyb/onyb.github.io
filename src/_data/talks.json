@@ -1,0 +1,124 @@
+{
+  "list": [
+    {
+      "title": "Wallet Opsec for the Pragmatic",
+      "venue": "ETH Belgrade",
+      "date": "2024-06-03",
+      "links": [
+        { "label": "slides", "url": "https://www.canva.com/design/DAGGbUMwNXw/poLNgY-DZbfkJG_HeHKS4Q/view" }
+      ]
+    },
+    {
+      "title": "Intro to Elliptic Curve Crypto",
+      "venue": "0xCastle",
+      "date": "2024-05-28",
+      "links": [
+        { "label": "slides", "url": "https://www.canva.com/design/DAGGdpMfvAc/fl0VXc-FOqRAK9wSPKUS-A/view" }
+      ]
+    },
+    {
+      "title": "Teaching Chromium to speak web3",
+      "venue": null,
+      "date": "2023-10-06",
+      "links": [
+        { "label": "slides", "url": "https://www.canva.com/design/DAFv92wTlws/tFDi-aE90uc2xzNnBYFWPg/view" }
+      ]
+    },
+    {
+      "title": "Roll your own crypto",
+      "venue": "Protocol Berg",
+      "date": "2023-09-15",
+      "links": [
+        { "label": "notes", "url": "https://onyb.gitbook.io/roll-your-own-crypto" }
+      ]
+    },
+    {
+      "title": "Open Source All things!",
+      "venue": "Funding the Commons Berlin",
+      "date": "2023-09-09",
+      "links": [
+        { "label": "slides", "url": "https://www.canva.com/design/DAFtXoD1_e8/8e6-tcE_UutrI0DCMiIwow/view" }
+      ]
+    },
+    {
+      "title": "What the Hex!",
+      "venue": "ETH Gathering",
+      "date": "2022-11-19",
+      "links": [
+        { "label": "event", "url": "https://ethgathering2022.sched.com/event/1DxZi/what-the-hex" }
+      ]
+    },
+    {
+      "title": "Do NOT sign gibberish!",
+      "venue": "ETHBrno",
+      "date": "2022-11-12",
+      "links": [
+        { "label": "event", "url": "https://ethbrno.cz" }
+      ]
+    },
+    {
+      "title": "Making Brave an InterPlanetary browser",
+      "venue": "IPFS Camp",
+      "date": "2022-10-29",
+      "links": [
+        { "label": "tweet", "url": "https://twitter.com/dietrich/status/1586302623371919360" }
+      ]
+    },
+    {
+      "title": "Web3 Wallets 101",
+      "venue": "Futurama",
+      "date": "2022-08-05",
+      "links": [
+        { "label": "tweet", "url": "https://twitter.com/FuturamaWeb3/status/1554373853576450048" }
+      ]
+    },
+    {
+      "title": "Web3 browsers",
+      "venue": "Filecoin Orbit",
+      "date": "2021-10-22",
+      "links": [
+        { "label": "tweet", "url": "https://twitter.com/onybose/status/1451290887573565468" }
+      ]
+    },
+    {
+      "title": "A Brave New Wallet",
+      "venue": "Browsers3000",
+      "date": "2021-07-09",
+      "links": [
+        { "label": "writeup", "url": "https://blog.ipfs.io/brave-new-wallet" }
+      ]
+    },
+    {
+      "title": "Let's talk elliptic curves and bitcoin",
+      "venue": "DevBreak",
+      "date": "2021-03-24",
+      "links": [
+        { "label": "event", "url": "https://www.devbreak.io/workshop/lets-talk-elliptic-curves-and-bitcoin" }
+      ]
+    },
+    {
+      "title": "Demystifying the cryptography behind bitcoin",
+      "venue": "Paris P2P Festival",
+      "date": "2020-01-10",
+      "links": [
+        { "label": "notes", "url": "https://onyb.gitbook.io/secp256k1-python" }
+      ]
+    },
+    {
+      "title": "Introducing ecPoint Calibrate",
+      "venue": "ESoWC Day @ ECMWF",
+      "date": "2019-09-20",
+      "links": [
+        { "label": "slides", "url": "https://docs.google.com/presentation/d/1NcAI7ZV6s0VCdKMS6SdXfGcSH5pHPhlH9drzJx0x4YU/edit?usp=sharing" }
+      ]
+    },
+    {
+      "title": "reobject",
+      "venue": "Django Paris",
+      "date": "2018-02-18",
+      "links": [
+        { "label": "slides", "url": "https://slides.com/onyb/reobject" }
+      ]
+    }
+  ]
+}
