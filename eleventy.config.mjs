@@ -1,6 +1,7 @@
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
+  eleventyConfig.addPassthroughCopy({ "src/favicons": "/" });
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/quotes/quotes.js");
   eleventyConfig.addPassthroughCopy({ "src/_data/quotes.json": "quotes/quotes.json" });
