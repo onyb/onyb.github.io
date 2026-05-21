@@ -33,7 +33,7 @@
 
     <h1 class="visually-hidden">quotes</h1>
 
-<article class="quote-card" id="quote-card" hidden>
+<article class="quote-card" id="quote-card">
   <span class="qc-corner qc-tl" aria-hidden="true"></span>
   <span class="qc-corner qc-tr" aria-hidden="true"></span>
   <span class="qc-corner qc-bl" aria-hidden="true"></span>
@@ -48,19 +48,19 @@
           stroke-linejoin="round" stroke-linecap="round">001</text>
   </svg>
 
-  <blockquote class="qc-text" id="qc-text">—</blockquote>
+  <blockquote class="qc-text" id="qc-text">The degree to which a person can grow is directly proportional to the amount of truth he can accept about himself without running away.</blockquote>
   <hr class="qc-rule">
-  <div class="qc-author" id="qc-author">—</div>
+  <div class="qc-author" id="qc-author">Leland Val Van De Wall</div>
   <div class="qc-meta" id="qc-meta"></div>
 </article>
 
-<nav class="qc-controls" id="qc-controls" aria-label="Quote navigation" hidden>
-  <button id="btn-prev" type="button" aria-label="Previous quote" title="Previous">
+<nav class="qc-controls" id="qc-controls" aria-label="Quote navigation">
+  <button id="btn-prev" type="button" aria-label="Previous quote" title="Previous" disabled>
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <polyline points="15 5 8 12 15 19"/>
     </svg>
   </button>
-  <button id="btn-random" type="button" aria-label="Random quote" title="Shuffle">
+  <button id="btn-random" type="button" aria-label="Random quote" title="Shuffle" disabled>
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"/>
       <path d="m18 2 4 4-4 4"/>
@@ -69,7 +69,7 @@
       <path d="m18 14 4 4-4 4"/>
     </svg>
   </button>
-  <button id="btn-next" type="button" aria-label="Next quote" title="Next">
+  <button id="btn-next" type="button" aria-label="Next quote" title="Next" disabled>
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <polyline points="9 5 16 12 9 19"/>
     </svg>
@@ -81,7 +81,7 @@
 </p>
 
 <noscript>
-  <p class="dim">Quotes need JavaScript to render. Sorry, hacker — this one's not pure HTML.</p>
+  <p class="dim">The quote above is pure HTML — but flipping between them needs JavaScript.</p>
 </noscript>
 
 <script src="./quotes.js" defer></script>
