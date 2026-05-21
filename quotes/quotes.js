@@ -42,7 +42,10 @@
 
   const pad = (n) => String(n).padStart(3, "0");
 
-  // Per-quote background colors. Hue walks the color wheel via the golden
+  // Per-quote background colors. Mirrored at build time by quoteColorVars()
+  // in eleventy.config.mjs (which bakes the first quote's color onto <body>
+  // for first paint) — keep the two in sync.
+  // Hue walks the color wheel via the golden
   // angle (137.508°), guaranteeing visually distinct neighbours for as many
   // quotes as you throw at it. Saturation + lightness also vary slightly per
   // index for extra texture. Override on a single quote with `color: <hue>`
