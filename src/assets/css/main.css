@@ -5,6 +5,8 @@
   --dim: #6c7065;
   --accent: #26619c;
   --rule: #e6e2d3;
+  --verb: #c15f3c;        /* terracotta — homepage cycling "now" verb */
+  --verb-glint: #e6996f;  /* lighter highlight for the verb's shimmer sweep */
   --font-sans: system-ui, -apple-system, "Segoe UI Variable", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   --pencil-top: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 5' preserveAspectRatio='none'><path d='M2.3,2.7 C24,2.0 58,1.5 98,1.1 L97.4,2.0 C58,2.7 24,3.5 1.6,4.0 Z' fill='black'/></svg>");
@@ -73,6 +75,41 @@ h2 {
   font-size: 1.35rem;
   font-weight: 800;
   margin: 2.5rem 0 1rem;
+}
+
+/* ── Homepage name + small cycling "now" verb ── */
+.bio h1 .surname { color: var(--dim); }
+
+/* scoped under .bio so the weight beats the `.bio p` rule */
+.bio .now {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--verb);
+  margin: -1.1rem 0 2.25rem;
+}
+
+/* Subtle Claude-style shimmer sweeping across the verb */
+.now .ani-verb {
+  background-image: linear-gradient(100deg, var(--verb) 0 40%, var(--verb-glint) 50%, var(--verb) 60% 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: ani-shimmer 3s linear infinite;
+}
+@keyframes ani-shimmer {
+  from { background-position: 130% 0; }
+  to   { background-position: -130% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .now .ani-verb {
+    animation: none;
+    -webkit-text-fill-color: var(--verb);
+    color: var(--verb);
+  }
 }
 
 p { margin: 0 0 1rem; }

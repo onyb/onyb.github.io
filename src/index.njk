@@ -3,9 +3,8 @@ layout: base.njk
 pageTitle: ""
 ---
 <section class="bio">
-  <h1>
-    Hi, I'm Ani.
-  </h1>
+  <h1>Ani<span class="surname">rudha Bose</span></h1>
+  <p class="now" aria-hidden="true"><span class="ani-verb" id="ani-verb">{{ verbs[0] }}</span>…</p>
 
   <p>
     I'm a Senior Staff Engineer at <a href="https://brave.com">Brave</a>,
@@ -48,3 +47,7 @@ pageTitle: ""
     </li>
   </ul>
 </section>
+
+{# Verb list (src/_data/verbs.json) injected for /assets/js/verb-cycle.js #}
+<script type="application/json" id="verb-list">{{ verbs | dump | safe }}</script>
+<script src="/assets/js/verb-cycle.js" defer></script>
