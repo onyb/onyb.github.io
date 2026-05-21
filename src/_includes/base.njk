@@ -17,7 +17,7 @@
     })();
   </script>
 </head>
-<body class="{% if wide %}wide{% endif %}{% if pageClass %} {{ pageClass }}{% endif %}">
+<body class="{% if wide %}wide{% endif %}{% if pageClass %} {{ pageClass }}{% endif %}"{% if pageClass == "quotes" and quotes.list.length %} style="{{ quotes.list[0] | quoteColorVars(0) }}"{% endif %}>
   <!--
     hi, hacker. source is at https://github.com/onyb/onyb.github.io
     no trackers, no analytics, no cookies. just html.

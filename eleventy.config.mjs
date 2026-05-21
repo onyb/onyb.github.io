@@ -1,3 +1,25 @@
+// Per-quote colour palette. Mirror of paintForQuote() in
+// src/quotes/quotes.js — keep the two in sync. (No bundler here, so the
+// algorithm necessarily lives in both the build and the browser.)
+const QUOTE_GOLDEN_ANGLE = 137.508;
+const QUOTE_SAT_STEPS = [50, 58, 62, 54];
+const QUOTE_LIGHT_STEPS = [84, 86, 82, 87];
+
+const quoteColorVars = (quote, i) => {
+  const h =
+    typeof quote.color === "number"
+      ? ((quote.color % 360) + 360) % 360
+      : (i * QUOTE_GOLDEN_ANGLE) % 360;
+  const s = QUOTE_SAT_STEPS[i % QUOTE_SAT_STEPS.length];
+  const l = QUOTE_LIGHT_STEPS[i % QUOTE_LIGHT_STEPS.length];
+  return [
+    `--quote-bg-light: hsl(${h}, ${s}%, ${l}%)`,
+    `--quote-rule-light: hsl(${h}, ${Math.max(s - 25, 25)}%, ${l - 22}%)`,
+    `--quote-bg-dark: hsl(${h}, ${Math.max(s - 30, 18)}%, 12%)`,
+    `--quote-rule-dark: hsl(${h}, ${Math.max(s - 35, 15)}%, 28%)`,
+  ].join("; ");
+};
+
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
@@ -26,6 +48,12 @@ export default function (eleventyConfig) {
     if (Number.isNaN(d.getTime())) return String(value);
     return d.toISOString().slice(0, 10);
   });
+
+  // Inline CSS custom properties for a quote's colour, used to bake the first
+  // quote's hue onto <body> at build time so the page paints the right colour
+  // immediately — no #f0e0a0 fallback flash (incl. the iOS status-bar tint)
+  // before quotes.js fetches the data and runs paintForQuote().
+  eleventyConfig.addFilter("quoteColorVars", quoteColorVars);
 
   eleventyConfig.addFilter("host", (url) => {
     try {
