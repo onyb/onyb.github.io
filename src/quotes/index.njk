@@ -6,7 +6,12 @@ pageClass: quotes
 ---
 <h1 class="visually-hidden">quotes</h1>
 
-<article class="quote-card" id="quote-card" hidden>
+{# Render the first quote at build time so the card paints immediately — no
+   empty/hidden flash before quotes.js fetches the data. JS re-applies the
+   same values (idempotent on first render) and then takes over navigation. #}
+{%- set q0 = quotes.list[0] -%}
+{%- set single = quotes.list.length < 2 -%}
+<article class="quote-card" id="quote-card"{% if not q0 %} hidden{% endif %}>
   <span class="qc-corner qc-tl" aria-hidden="true"></span>
   <span class="qc-corner qc-tr" aria-hidden="true"></span>
   <span class="qc-corner qc-bl" aria-hidden="true"></span>
@@ -21,19 +26,19 @@ pageClass: quotes
           stroke-linejoin="round" stroke-linecap="round">001</text>
   </svg>
 
-  <blockquote class="qc-text" id="qc-text">—</blockquote>
+  <blockquote class="qc-text" id="qc-text">{{ q0.text or "—" }}</blockquote>
   <hr class="qc-rule">
-  <div class="qc-author" id="qc-author">—</div>
-  <div class="qc-meta" id="qc-meta"></div>
+  <div class="qc-author" id="qc-author">{{ q0.author or q0.source or "—" }}</div>
+  <div class="qc-meta" id="qc-meta">{% if q0.work %}<div>{{ q0.work }}</div>{% endif %}{% if q0.date or q0.year %}<div>{{ q0.date or q0.year }}</div>{% endif %}</div>
 </article>
 
-<nav class="qc-controls" id="qc-controls" aria-label="Quote navigation" hidden>
-  <button id="btn-prev" type="button" aria-label="Previous quote" title="Previous">
+<nav class="qc-controls" id="qc-controls" aria-label="Quote navigation"{% if not q0 %} hidden{% endif %}>
+  <button id="btn-prev" type="button" aria-label="Previous quote" title="Previous"{% if single %} disabled{% endif %}>
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <polyline points="15 5 8 12 15 19"/>
     </svg>
   </button>
-  <button id="btn-random" type="button" aria-label="Random quote" title="Shuffle">
+  <button id="btn-random" type="button" aria-label="Random quote" title="Shuffle"{% if single %} disabled{% endif %}>
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"/>
       <path d="m18 2 4 4-4 4"/>
@@ -42,7 +47,7 @@ pageClass: quotes
       <path d="m18 14 4 4-4 4"/>
     </svg>
   </button>
-  <button id="btn-next" type="button" aria-label="Next quote" title="Next">
+  <button id="btn-next" type="button" aria-label="Next quote" title="Next"{% if single %} disabled{% endif %}>
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <polyline points="9 5 16 12 9 19"/>
     </svg>
@@ -54,7 +59,7 @@ pageClass: quotes
 </p>
 
 <noscript>
-  <p class="dim">Quotes need JavaScript to render. Sorry, hacker — this one's not pure HTML.</p>
+  <p class="dim">The quote above is pure HTML — but flipping between them needs JavaScript.</p>
 </noscript>
 
 <script src="./quotes.js" defer></script>
