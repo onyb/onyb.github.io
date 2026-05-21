@@ -86,7 +86,12 @@
     }
   };
 
-  const render = (i, { updateHash = true } = {}) => {
+  const prefersReduced =
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let swapTimer = null;
+
+  const apply = (i, updateHash) => {
     index = ((i % quotes.length) + quotes.length) % quotes.length;
     const q = quotes[index];
     textEl.textContent = q.text;
@@ -104,6 +109,22 @@
     btnPrev.disabled = single;
     btnNext.disabled = single;
     btnRandom.disabled = single;
+  };
+
+  // Flip between quotes with a quick crossfade: fade the contents out, swap,
+  // fade back in. Reduced-motion users (and the first paint) get it instantly.
+  const render = (i, { updateHash = true, animate = true } = {}) => {
+    if (!animate || prefersReduced) {
+      apply(i, updateHash);
+      return;
+    }
+    if (swapTimer) clearTimeout(swapTimer);
+    card.classList.add("qc-out");
+    swapTimer = setTimeout(() => {
+      apply(i, updateHash);
+      card.classList.remove("qc-out");
+      swapTimer = null;
+    }, 150);
   };
 
   const random = () => {
@@ -135,7 +156,43 @@
     }
   });
 
+  // The whole card is a control: click / tap to advance, swipe to navigate.
+  let suppressClick = false;
+  card.addEventListener("click", () => {
+    if (suppressClick || quotes.length < 2) return;
+    if (window.getSelection && String(window.getSelection())) return;
+    render(index + 1);
+  });
+
+  let touchX = null;
+  let touchY = null;
+  card.addEventListener(
+    "touchstart",
+    (e) => {
+      const t = e.changedTouches[0];
+      touchX = t.clientX;
+      touchY = t.clientY;
+    },
+    { passive: true }
+  );
+  card.addEventListener(
+    "touchend",
+    (e) => {
+      if (touchX === null || quotes.length < 2) return;
+      const t = e.changedTouches[0];
+      const dx = t.clientX - touchX;
+      const dy = t.clientY - touchY;
+      touchX = touchY = null;
+      if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) {
+        suppressClick = true;
+        setTimeout(() => (suppressClick = false), 350);
+        render(dx < 0 ? index + 1 : index - 1);
+      }
+    },
+    { passive: true }
+  );
+
   card.hidden = false;
   controls.hidden = false;
-  render(parseHash(), { updateHash: false });
+  render(parseHash(), { updateHash: false, animate: false });
 })();

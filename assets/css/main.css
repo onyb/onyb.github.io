@@ -339,6 +339,60 @@ html[data-theme="dark"] body.quotes {
   --rule: var(--quote-rule-dark, #4d4734);
 }
 
+/* Quotes is a one-screen experience — lock the layout to the viewport so the
+   card, controls, hint, and footer always fit without scrolling. */
+body.quotes main {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5rem;        /* match the other pages so the nav lines up */
+  padding-bottom: 1.5rem;
+}
+
+/* The corner brackets hug the quote itself — the card sizes to its contents
+   and floats, centred, in the colour wash with a soft drop shadow. */
+body.quotes .quote-card {
+  flex: 0 1 auto;
+  min-height: 0;
+  margin: auto auto 0;        /* centre vertically; sides auto centre it too */
+  width: 100%;
+  max-width: 34rem;
+  padding: 3rem 2.5rem 3.25rem;
+  box-shadow: 0 22px 50px -24px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+}
+
+/* Crossfade the contents when flipping between quotes */
+body.quotes .qc-text,
+body.quotes .qc-author,
+body.quotes .qc-meta,
+body.quotes .qc-number {
+  transition: opacity 0.16s ease, transform 0.16s ease;
+}
+body.quotes .quote-card.qc-out .qc-text,
+body.quotes .quote-card.qc-out .qc-author,
+body.quotes .quote-card.qc-out .qc-meta,
+body.quotes .quote-card.qc-out .qc-number {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+body.quotes .qc-controls {
+  width: 100%;
+  max-width: 34rem;          /* match the card so the row lines up with its edges */
+  margin: 1.75rem auto 0;
+}
+body.quotes .qc-hint { margin: 1rem 0 auto; }   /* auto-bottom pins footer down */
+body.quotes .site-footer { margin-top: 1.5rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  body.quotes .qc-text,
+  body.quotes .qc-author,
+  body.quotes .qc-meta,
+  body.quotes .qc-number { transition: none; }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px; height: 1px;
@@ -448,23 +502,32 @@ html[data-theme="dark"] body.quotes {
 /* Bottom outlined-button controls */
 .qc-controls {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.4rem;
   justify-content: flex-end;
   margin: 2.5rem 0 1rem;
   flex-wrap: wrap;
 }
 .qc-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.95rem;
+  height: 1.95rem;
+  padding: 0;
   background: transparent;
   border: 1.5px solid var(--fg);
-  padding: 0.55rem 1.1rem;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
   color: var(--fg);
   cursor: pointer;
   transition: background 0.12s, color 0.12s;
+}
+.qc-controls button svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 .qc-controls button:hover {
   background: var(--fg);
