@@ -62,6 +62,25 @@ export default function (eleventyConfig) {
     typeof s === "string" && s.length ? s[0].toUpperCase() + s.slice(1) : s
   );
 
+  // ISO 3166-1 alpha-2 code -> flag emoji, by mapping each letter to its
+  // regional indicator symbol (e.g. "rs" -> 🇷🇸). Returns "" for bad input.
+  eleventyConfig.addFilter("countryFlag", (code) => {
+    if (typeof code !== "string" || !/^[a-z]{2}$/i.test(code)) return "";
+    return String.fromCodePoint(
+      ...[...code.toUpperCase()].map((c) => 0x1f1e6 + c.charCodeAt(0) - 65)
+    );
+  });
+
+  // ISO alpha-2 code -> English country name for the flag's accessible label.
+  const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
+  eleventyConfig.addFilter("countryName", (code) => {
+    try {
+      return regionNames.of(code.toUpperCase()) || code;
+    } catch {
+      return code;
+    }
+  });
+
   eleventyConfig.addFilter("host", (url) => {
     try {
       return new URL(url).host.replace(/^www\./, "");

@@ -18,7 +18,7 @@ wide: true
       <li>
         {% if primary %}<a class="title" href="{{ primary.url }}">{{ t.title }}</a>{% else %}<span class="title">{{ t.title }}</span>{% endif %}
         <span class="meta">
-          {% if t.venue %}<span class="venue">{{ t.venue }}</span>{% endif %}
+          {% if t.venue or t.country or t.online %}<span class="venue">{% if t.country %}<span class="flag" role="img" aria-label="{{ t.country | countryName }}" title="{{ t.country | countryName }}">{{ t.country | countryFlag }}</span>{% elif t.online %}<span class="flag" role="img" aria-label="Online" title="Online">🌐</span>{% endif %}{% if t.venue %}{{ t.venue }}{% endif %}</span>{% endif %}
           {% if t.links and t.links.length %}<span class="links">{% for l in t.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</span>{% endif %}
         </span>
       </li>
