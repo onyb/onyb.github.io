@@ -1,4 +1,4 @@
-{%- set metaTitle = (pageTitle + " · " + site.title) if pageTitle else site.title -%}
+{%- set metaTitle = (site.title + " - " + (pageTitle | titleCap)) if pageTitle else site.title -%}
 {%- set metaDesc = pageDescription or site.description -%}
 {%- set metaUrl = site.url + page.url -%}
 {%- set metaType = pageType or "website" -%}

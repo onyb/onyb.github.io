@@ -9,7 +9,7 @@ export default {
   author: "Anirudha Bose",
   url: "https://anirudha.co",
   description:
-    "Anirudha (Ani) Bose — Senior Staff Engineer at Brave, working on Web3, wallets, and cryptography.",
+    "Senior Staff Engineer at Brave, working on Web3, wallets, and cryptography.",
   defaultImage: "/android-chrome-512x512.png",
   social,
   person: {

@@ -55,6 +55,13 @@ export default function (eleventyConfig) {
   // before quotes.js fetches the data and runs paintForQuote().
   eleventyConfig.addFilter("quoteColorVars", quoteColorVars);
 
+  // Capitalize the first letter only, leaving the rest untouched. Section
+  // titles are lowercase by design ("talks"); post titles are already
+  // proper-cased, so this is a no-op for them.
+  eleventyConfig.addFilter("titleCap", (s) =>
+    typeof s === "string" && s.length ? s[0].toUpperCase() + s.slice(1) : s
+  );
+
   eleventyConfig.addFilter("host", (url) => {
     try {
       return new URL(url).host.replace(/^www\./, "");
