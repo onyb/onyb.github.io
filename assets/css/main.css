@@ -306,6 +306,12 @@ ul.entries .meta {
   align-items: baseline;
 }
 ul.entries .venue { color: var(--dim); }
+ul.entries .flag {
+  margin-right: 0.4rem;
+  font-style: normal;
+  /* Emoji ignore `color`; nudge size up so it reads at meta font-size. */
+  font-size: 1.05em;
+}
 ul.entries .host { color: var(--dim); white-space: nowrap; }
 ul.entries .host::after { content: " ↗"; color: var(--dim); }
 ul.entries .kind {
