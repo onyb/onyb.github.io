@@ -4,7 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% include "head-meta.njk" %}
-  <link rel="stylesheet" href="/assets/css/main.css">
+  {# Inlined to avoid a render-blocking request — GH Pages' 10-min cache TTL
+     makes a separate stylesheet not worth the extra round trip. #}
+  <style>{% include "css/main.css" %}</style>
   <script>
     (function () {
       try {

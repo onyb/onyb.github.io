@@ -20,7 +20,7 @@ npm run build    # one-shot build to ./_site
 | Writing list        | `src/_data/writings.json`                |
 | Quotes              | `src/_data/quotes.json`                  |
 | Internal posts      | `src/writing/posts/<slug>.md`            |
-| Styles              | `src/assets/css/main.css`                |
+| Styles              | `src/_includes/css/main.css` (inlined)   |
 | Site meta + socials | `src/_data/site.js`                      |
 | Page templates      | `src/_includes/*.njk`, `src/*.njk`       |
 

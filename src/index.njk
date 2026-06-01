@@ -50,6 +50,6 @@ pageType: "profile"
   </ul>
 </section>
 
-{# Verb list (src/_data/verbs.json) injected for /assets/js/verb-cycle.js #}
+{# Verb list (src/_data/verbs.json) injected for the inlined verb-cycle script #}
 <script type="application/json" id="verb-list">{{ verbs | dump | safe }}</script>
-<script src="/assets/js/verb-cycle.js" defer></script>
+<script>{% include "js/verb-cycle.js" %}</script>
